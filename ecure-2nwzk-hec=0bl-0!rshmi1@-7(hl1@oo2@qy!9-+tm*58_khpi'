@@ -1,0 +1,50 @@
+[33mcommit ba0b7e8e8f06169469ece9eb6ce9184eea5e9b7a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Sat Jan 11 17:27:30 2025 +0000
+
+    Connect to postgre database
+
+[33mcommit 4dd47c52275730dca0555a08174c1d414af4b149[m
+Merge: b325842 42f9cbd
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Sat Jan 11 16:38:11 2025 +0000
+
+    Merge remote-tracking branch 'refs/remotes/origin/main'
+
+[33mcommit b3258422e51f7831293d73113f032a96b52e958a[m
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Sat Jan 11 16:22:38 2025 +0000
+
+    Amend procfile for deployment to Heroku
+
+[33mcommit 3983ca0fb8a6080426c5a0301952134f7c6337ee[m
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Sat Jan 11 16:10:25 2025 +0000
+
+    Prepare files for deployment to Heroku
+
+[33mcommit 42f9cbd42c0cc54dae796cc25d86352c1a62e4bd[m
+Author: Ash <ashleyjph@gmail.com>
+Date:   Wed Jan 8 19:35:51 2025 +0000
+
+    Update issue templates
+    
+    Create user story template
+
+[33mcommit b93fc367bff7ef9a6f329e15928ec7c2f2fe6d16[m
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Wed Jan 8 19:21:10 2025 +0000
+
+    Install django
+
+[33mcommit e31c15dc29eb5845bf2b139d5538a53eecb2ef48[m
+Author: Ashley Preece <ashleyjph@gmail.com>
+Date:   Wed Jan 8 19:13:46 2025 +0000
+
+    Initial commit
+
+[33mcommit e0dfd28687b3658096300005a676451089e65b23[m
+Author: Ash <ashleyjph@gmail.com>
+Date:   Wed Jan 8 19:06:37 2025 +0000
+
+    Initial commit
