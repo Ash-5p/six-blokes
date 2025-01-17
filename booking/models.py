@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.core.validators import MaxValueValidator #https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model/
 
 TIMES = (
     (12, '12:00 - 13:00'),
@@ -15,6 +16,13 @@ TIMES = (
     (22, '22:00 - 23:00'),
 )
 
+class Allergen(models.Model):
+    name = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
+
 class Booking(models.Model):
     name = models.CharField(max_length=200, default="")
     user = models.ForeignKey(
@@ -22,11 +30,14 @@ class Booking(models.Model):
     )
     date = models.DateField()
     timeSlot = models.IntegerField(choices=TIMES)
-    guests = models.PositiveIntegerField()
-    allergies = models.ManyToManyField(Allergens, blank=True)
+    guests = models.PositiveIntegerField(validators=[MaxValueValidator(12)])
+    # allergies = models.ManyToManyField(Allergen, blank=True)
     bookingNotes = models.TextField()
+
+    class Meta:
+        ordering = ["-date"]
 
     def __str__(self):
         return f"Booking by {self.name} on {self.date}"
-
+        
     
