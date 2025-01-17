@@ -29,10 +29,10 @@ class Booking(models.Model):
         User, on_delete=models.CASCADE, related_name="booking_user", blank=True
     )
     date = models.DateField()
-    timeSlot = models.IntegerField(choices=TIMES)
+    time_slot = models.IntegerField(choices=TIMES)
     guests = models.PositiveIntegerField(validators=[MaxValueValidator(12)])
-    # allergies = models.ManyToManyField(Allergen, blank=True)
-    bookingNotes = models.TextField()
+    allergies = models.ManyToManyField(Allergen, blank=True)
+    booking_notes = models.TextField()
 
     class Meta:
         ordering = ["-date"]

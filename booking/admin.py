@@ -1,18 +1,17 @@
 from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
-from .models import Booking ,Allergen
+from .models import Booking, Allergen
 
 # Register your models here.
 @admin.register(Booking)
 class BookingAdmin(SummernoteModelAdmin):
 
-    list_display = ('name', 'date', 'timeSlot')
+    list_display = ('name', 'date', 'time_slot')
     search_fields = ['name', 'date']
-    list_filter = ('date', 'timeSlot',)
-    summernote_fields = ('bookingNotes')
+    list_filter = ('date', 'time_slot',)
+    summernote_fields = ('booking_notes')
 
 
-# Register your models here.
 @admin.register(Allergen)
 class AllergenAdmin(SummernoteModelAdmin):
 
