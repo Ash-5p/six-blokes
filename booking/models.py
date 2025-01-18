@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.core.validators import MaxValueValidator #https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model/
+from django.core.validators import MaxValueValidator, MinValueValidator #https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model/
 
 TIMES = (
     (12, '12:00 - 13:00'),
@@ -30,7 +30,7 @@ class Booking(models.Model):
     )
     date = models.DateField()
     time_slot = models.IntegerField(choices=TIMES)
-    guests = models.PositiveIntegerField(validators=[MaxValueValidator(12)])
+    guests = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
     allergies = models.ManyToManyField(Allergen, blank=True)
     booking_notes = models.TextField()
 
