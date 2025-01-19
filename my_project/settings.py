@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'SECRET_KEY'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['8000-ash5p-sixblokes-wcvshivwdc6.ws.codeinstitute-ide.net',
+ALLOWED_HOSTS = ['8000-ash5p-sixblokes-1vogwsckwp8.ws.codeinstitute-ide.net',
     '.herokuapp.com']
 
 
@@ -42,9 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
+    'crispy_bootstrap5',
     'django_summernote',
     'booking',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -92,7 +97,7 @@ DATABASES = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-ash5p-sixblokes-wcvshivwdc6.ws.codeinstitute-ide.net',
+    'https://8000-ash5p-sixblokes-1vogwsckwp8.ws.codeinstitute-ide.net',
     'https://*.herokuapp.com',
 ]
 
