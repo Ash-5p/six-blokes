@@ -5,6 +5,5 @@ from .models import Booking, Allergen
 from .forms import BookingForm
 
 # Create your views here.
-class MakeBooking(generic.FormView):
-    queryset = Booking.objects.all()
-    template_name = "booking_form.html"
+class MakeBooking(generic.TemplateView):
+    template_name = "booking/booking.html"
