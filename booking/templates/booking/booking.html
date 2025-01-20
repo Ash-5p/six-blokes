@@ -1,11 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-
-<h1>Book a Table</h1>
-<!-- <form method="post">
-        {{ booking_form }}
-        {% csrf_token %}
-        <button class="btn btn-secondary" type="submit">Submit</button> -->
-        
+<div class="container text-center bg-dark sign-in-box">
+        <div class="row">
+                <div class="col-md-8 mt-3 offset-md-2">
+                        <h3>Book a Table</h3>
+                </div>
+        </div>
+        <div class="row">
+                <div class="col-md-8 mt-3 offset-md-2">
+                        <form method="POST" action="{% url 'booking' %}">
+                                {% csrf_token %}
+                                {{ form.as_ul }}
+                                {% if redirect_field_value %}
+                                <input type="hidden" name="{{ redirect_field_name }}"
+                                        value="{{ redirect_field_value }}" />
+                                {% endif %}
+                                <button class="btn btn-signup right" type="submit">Book Table</button>
+                        </form>
+                </div>
+        </div>
+</div>
 {% endblock %}
