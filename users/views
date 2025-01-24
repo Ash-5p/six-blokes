@@ -1,0 +1,24 @@
+from allauth.account.forms import LoginForm, SignupForm
+from django.shortcuts import render
+
+def login_and_signup_view(request):
+    login_form = LoginForm()
+    signup_form = SignupForm()
+    
+    if request.method == "POST":
+        if "login" in request.POST:  # Handle login form submission
+            login_form = LoginForm(data=request.POST)
+            if login_form.is_valid():
+                login_form.save()
+                # Redirect or handle success
+        elif "signup" in request.POST:  # Handle signup form submission
+            signup_form = SignupForm(data=request.POST)
+            if signup_form.is_valid():
+                signup_form.save(request)  # Pass the request for proper signup
+                # Redirect or handle success
+
+    context = {
+        "login_form": login_form,
+        "signup_form": signup_form,
+    }
+    return render(request, "your_template_name.html", context)

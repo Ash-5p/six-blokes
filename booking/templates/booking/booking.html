@@ -11,7 +11,7 @@
                 <div class="col-md-8 mt-3 offset-md-2">
                         <form method="POST" action="{% url 'booking' %}">
                                 {% csrf_token %}
-                                {{ form.as_ul }}
+                                {{ form.as_p }}
                                 {% if redirect_field_value %}
                                 <input type="hidden" name="{{ redirect_field_name }}"
                                         value="{{ redirect_field_value }}" />

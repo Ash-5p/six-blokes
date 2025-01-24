@@ -33,7 +33,6 @@
 
     <header class="container-fluid bg-dark">
 
-        <!-- Center Section: Logo -->
         <div class="mx-auto">
             <a class="logo-container" href="{% url 'booking' %}">
                 <div class="logo"></div>
@@ -54,7 +53,7 @@
                         {% if user.is_authenticated %}
                         <li class="nav-item">
                             <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout
+                                href="{% url 'account_logout' %}">Logout</a>
                         </li>
                         {% else %}
                         <li class="nav-item">
@@ -81,6 +80,10 @@
 
 
     <main class="flex-shrink-0 main-bg">
+        
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">You are logged in as {{ user }}</p>
+        {% endif %}
 
         {% block content %}
         <!-- Content Goes here -->
@@ -90,7 +93,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
-        <p class="m-0 text-center">Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742 | <i
+        <p class="m-0 text-center">Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742<i
                 class="fa-solid fa-envelope ms-3"></i> - info@sixblokes.com</p>
         <p class="m-0 text-center">Follow us: <i class="fab fa-facebook-square ms-3"></i>
             <i class="fa-brands fa-square-x-twitter ms-3"></i>
