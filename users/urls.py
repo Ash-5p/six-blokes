@@ -1,7 +1,6 @@
 from django.urls import path
-from .views import custom_logout_view
+from . import views
 
 urlpatterns = [
-    # Other URLs...
-    path('accounts/logout/', custom_logout_view, name='account_logout'),  # Overrides Allauth logout
+    path('', views.login_and_signup_view, name='signin_signup'),
 ]
