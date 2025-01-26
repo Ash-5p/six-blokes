@@ -12,11 +12,12 @@
       <form method="POST" action="{% url 'signin_signup' %}">
         {% csrf_token %}
         {{ login_form.as_p }}
-        <input type="hidden" name="login" value="1">
+        <input type="hidden" name="form_type" value="login">
         <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
   </div>
+  <hr>
   <div class="row">
     <!-- Sign Up Form -->
     <div class="col mt-3">
@@ -24,7 +25,7 @@
       <form method="POST" action="{% url 'signin_signup' %}">
         {% csrf_token %}
         {{ signup_form.as_p }}
-        <input type="hidden" name="signup" value="1">
+        <input type="hidden" name="form_type" value="signup">
         <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %}</button>
       </form>
     </div>

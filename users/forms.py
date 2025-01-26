@@ -23,7 +23,7 @@ class CustomSignupForm(SignupForm):
     def save(self, request):
 
         user = super(CustomSignupForm, self).save(request)
-        
+    
         name = self.cleaned_data.get('name')
 
         if name:
