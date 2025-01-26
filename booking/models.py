@@ -24,6 +24,9 @@ class Allergen(models.Model):
 
 
 class Booking(models.Model):
+    """
+    Stores a single booking request.
+    """
     name = models.CharField(max_length=200, default="")
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_user", blank=True

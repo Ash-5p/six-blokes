@@ -5,10 +5,21 @@ from .models import Booking, Allergen
 from .forms import BookingForm
 
 # Create your views here.
-class MakeBooking(generic.TemplateView):
-    template_name = "booking/booking.html"
-
 def booking_view(request):
-    context ={}
-    context['form']= BookingForm()
-    return render(request, "booking.html", context)
+    booking_form = BookingForm()
+
+    if request.method == "POST":
+        booking_form = BookingForm(data=request.POST)
+        if booking_form.is_valid():
+            booking_form.save()
+            messages.add_message(request, messages.SUCCESS, "Booking Successful! We look forward to seeing you!")
+
+
+    return render(
+        request,
+        "booking/booking.html",
+        {   
+            "booking": Booking,
+            "booking_form": booking_form
+        },
+    )
