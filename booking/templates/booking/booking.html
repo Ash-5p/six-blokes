@@ -10,11 +10,15 @@
         </div>
         <div class="row">
                 <div class="col-md-8 mt-3 offset-md-2">
+                        {% if user.is_authenticated %}
                         <form method="POST" action="{% url 'booking' %}">
                                 {% csrf_token %}
                                 {{ booking_form | crispy }}
                                 <button class="btn btn-signup right" type="submit">Book Table</button>
                         </form>
+                        {% else %}
+                        <p>Please login to make a booking</p>
+                        {% endif %}
                 </div>
         </div>
 </div>
