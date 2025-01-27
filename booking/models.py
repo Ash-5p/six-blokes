@@ -27,11 +27,10 @@ class Booking(models.Model):
     """
     Stores a single booking request.
     """
-    name = models.CharField(max_length=200, default="")
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="booking_user", blank=True
+        User, on_delete=models.CASCADE, related_name="booking_user"
     )
-    date = models.DateField()
+    date = models.DateField(blank=True)
     time_slot = models.IntegerField(choices=TIMES)
     guests = models.PositiveIntegerField(validators=[MinValueValidator(1), MaxValueValidator(12)])
     allergies = models.ManyToManyField(Allergen, blank=True)
@@ -39,6 +38,10 @@ class Booking(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+    @property
+    def name(self):
+        return self.user.first_name
 
     def __str__(self):
         return f"Booking by {self.name} on {self.date}"
