@@ -22,7 +22,7 @@
     <!-- Sign Up Form -->
     <div class="col mt-3">
       <h3>{% trans "Sign Up" %}</h3>
-      <form method="POST" action="{% url 'signin_signup' %}">
+      <form method="POST" action="{% url 'signin_signup' %}" id="signup-form">
         {% csrf_token %}
         {{ signup_form.as_p }}
         <input type="hidden" name="form_type" value="signup">

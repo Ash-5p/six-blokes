@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.models import User
 from django.views import generic
 from django.contrib import messages
@@ -15,8 +15,10 @@ def booking_view(request):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking_form.save()
-            messages.add_message(request, messages.SUCCESS, "Booking Successful! We look forward to seeing you!")
-
+            messages.success(request, "Booking Successful! We look forward to seeing you!")
+            return redirect(booking_view)
+        else:
+            messages.error(request, "Booking failed, Please try again")
 
     return render(
         request,
