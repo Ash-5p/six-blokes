@@ -28,3 +28,15 @@ def booking_view(request):
             "booking_form": booking_form
         },
     )
+
+# class BookingList(generic.ListView):
+#     queryset = Booking.objects.all().order_by("-date")
+#     template_name = "booking/booking_list.html"
+
+def booking_list_view(request):
+    user_bookings = Booking.objects.filter(user=request.user)
+    return render(
+        request,
+        "booking/booking_list.html",
+        {"user_bookings": user_bookings}
+    )

@@ -2,9 +2,22 @@
 
 {% block content %}
 <div class="container text-center booking-list">
-    <div class="row">
-            <div class="col-md-8 mt-3 offset-md-2">
-                    <h3>Upcoming Bookings</h3>
-            </div>
-    </div>
+        <div class="row">
+                <div class="col-md-8 mt-3 offset-md-2">
+                        <h3>Upcoming Bookings</h3>
+                        {% if user_bookings %}
+                        <ul>
+                                {% for booking in user_bookings %}
+                                <ul>
+                                        <li>{{ booking.date }}</li>
+                                        <li>{{ booking.timeslot }}</li>
+                                </ul>
+                                {% endfor %}
+                        </ul>
+                        {% else %}
+                        <p>You currently have no upcoming bookings</p>
+                        {% endif %}
+                </div>
+        </div>
+</div>
 {% endblock %}
