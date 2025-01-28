@@ -34,7 +34,7 @@ def login_and_signup_view(request):
             if signup_form.is_valid():
                 # Save the user
                 signup_form.save(request)
-                messages.success(request, "Account created successfully! Please log in.")
+                messages.success(request, "Account created successfully!")
                 return redirect("/")
             else:
                 messages.error(request, "Sign-up failed. Please correct the errors.")

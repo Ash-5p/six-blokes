@@ -1,0 +1,93 @@
+[
+    {
+        "model": "booking.allergen",
+        "pk": 1,
+        "fields": {
+            "name": "Milk"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 2,
+        "fields": {
+            "name": "Gluten"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 3,
+        "fields": {
+            "name": "Eggs"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 4,
+        "fields": {
+            "name": "Crustaceans"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 5,
+        "fields": {
+            "name": "Nuts"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 6,
+        "fields": {
+            "name": "Peanuts"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 7,
+        "fields": {
+            "name": "Soybeans"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 8,
+        "fields": {
+            "name": "Sesame Seeds"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 9,
+        "fields": {
+            "name": "Sulphites"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 10,
+        "fields": {
+            "name": "Lupin"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 11,
+        "fields": {
+            "name": "Molluscs"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 12,
+        "fields": {
+            "name": "Mustard"
+        }
+    },
+    {
+        "model": "booking.allergen",
+        "pk": 13,
+        "fields": {
+            "name": "Celery"
+        }
+    }
+]

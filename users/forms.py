@@ -7,12 +7,11 @@ class CustomSignupForm(SignupForm):
     Sign up form - Modifies the default allauth signup form to include name input.
     '''
     def __init__(self, *args, **kwargs):
-        super(CustomSignupForm, self).__init__(*args, **kwargs)
-        
+        super().__init__(*args, **kwargs)
         self.fields['name'] = forms.CharField(
             required=True,
             label="Full Name",
-            widget=forms.TextInput(attrs={'placeholder': 'Enter your full name'})
+            widget=forms.TextInput(attrs={'placeholder': 'Enter your full name'}),
         )
         
         self.fields = {
