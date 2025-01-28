@@ -133,6 +133,29 @@ input[id^="id_allergies_"],
     border: solid white 5px;
 }
 
+.user-bookings button {
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border: solid black;
+    background-color: #ffcc00;
+    color: black;
+    padding-bottom: 0;
+}
+
+.user-bookings ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
+}
+
+.user-bookings li {
+    margin: 5px;
+}
+
 /*Footer-----------------------------------------------*/
 
 footer {

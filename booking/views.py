@@ -16,7 +16,7 @@ def booking_view(request):
             booking.user = request.user
             booking_form.save()
             messages.success(request, "Booking Successful! We look forward to seeing you!")
-            return redirect(booking_view)
+            return redirect(booking_list_view)
         else:
             messages.error(request, "Booking failed, Please try again")
 

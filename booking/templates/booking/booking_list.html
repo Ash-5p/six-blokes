@@ -15,16 +15,22 @@
                                         <th>Edit Booking</th>
                                         <th>Delete Booking</th>
                                 </tr>
+                                {% for booking in user_bookings %}
                                 <tr class="booking-entry">
-                                        {% for booking in user_bookings %}
                                         <td>{{ booking.date }}</td>
                                         <td>{{ booking.time_slot }}:00</td>
                                         <td>{{ booking.guests }}</td>
-                                        <td>{{ booking.allergies }}</td>
-                                        <td><button></td>
-                                        <td><button></td>
-                                        {% endfor %}
+                                        <td>
+                                                <ul>
+                                                        {% for allergy in booking.allergies.all %}
+                                                        <li class="list-unstyled flex-column">{{ allergy.name }}</li>
+                                                        {% endfor %}
+                                                </ul>
+                                        </td>
+                                        <td><button><i class="fa-solid fa-pencil"></i></button></td>
+                                        <td><button><i class="fa-solid fa-x"></i></button></td>
                                 </tr>
+                                {% endfor %}
                         </table>
                         {% else %}
                         <p>You currently have no upcoming bookings</p>
