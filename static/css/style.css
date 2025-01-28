@@ -83,6 +83,8 @@ header {
 
 /*Sign in-----------------------------------------------*/
 
+
+/*Booking Form-----------------------------------------------*/
 #div_id_allergies > div {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -113,6 +115,22 @@ input[id^="id_allergies_"],
 #div_id_allergies .form-check-input:checked + .form-check-label {
     background-color: #ffcc00;
     border-color: #bd0000;
+}
+
+/*Exsiting Bookings-----------------------------------------------*/
+
+.user-bookings {
+    width: 100%;
+}
+
+.user-bookings th {
+    background-color: black;
+    border: solid white 5px;
+}
+
+.user-bookings td {
+    background-color: grey;
+    border: solid white 5px;
 }
 
 /*Footer-----------------------------------------------*/

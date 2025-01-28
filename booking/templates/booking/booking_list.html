@@ -6,14 +6,26 @@
                 <div class="col-md-8 mt-3 offset-md-2">
                         <h3>Upcoming Bookings</h3>
                         {% if user_bookings %}
-                        <ul>
-                                {% for booking in user_bookings %}
-                                <ul>
-                                        <li>{{ booking.date }}</li>
-                                        <li>{{ booking.timeslot }}</li>
-                                </ul>
-                                {% endfor %}
-                        </ul>
+                        <table class="user-bookings">
+                                <tr>
+                                        <th>Booking Date</th>
+                                        <th>Time Slot</th>
+                                        <th>Number of Guests</th>
+                                        <th>Allergies</th>
+                                        <th>Edit Booking</th>
+                                        <th>Delete Booking</th>
+                                </tr>
+                                <tr class="booking-entry">
+                                        {% for booking in user_bookings %}
+                                        <td>{{ booking.date }}</td>
+                                        <td>{{ booking.time_slot }}:00</td>
+                                        <td>{{ booking.guests }}</td>
+                                        <td>{{ booking.allergies }}</td>
+                                        <td><button></td>
+                                        <td><button></td>
+                                        {% endfor %}
+                                </tr>
+                        </table>
                         {% else %}
                         <p>You currently have no upcoming bookings</p>
                         {% endif %}
