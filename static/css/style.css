@@ -6,6 +6,10 @@ body {
     color: #ffcc00;
 }
 
+main {
+    margin-bottom: 20px;
+}
+
 .btn {
     color: #ffcc00;
     border: 1px solid #ffcc00;
@@ -146,7 +150,7 @@ input[id^="id_allergies_"],
 .user-bookings ul {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
     width: 100%;
     padding: 2px;
     margin: 2px;

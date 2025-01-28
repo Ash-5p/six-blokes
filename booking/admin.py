@@ -11,7 +11,7 @@ class BookingAdmin(SummernoteModelAdmin):
     search_fields = ['name', 'date']
     list_filter = ('date', 'time_slot',)
     summernote_fields = ('booking_notes')
-
+    filter_horizontal = ('allergies',)
 
 @admin.register(Allergen)
 class AllergenAdmin(SummernoteModelAdmin):
