@@ -96,19 +96,23 @@ input[id^="id_allergies_"],
 #div_id_allergies .form-check-label {
     display: inline-block;
     width: 100%;
-    padding: 10px 20px;
     margin: 5px;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
+    border: 2px solid #ffcc00;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: black;
+    font-size: 1.5em;
+}
+
+#div_id_allergies .form-check-label:hover {
+    background-color: gray;
 }
 
 #div_id_allergies .form-check-input:checked + .form-check-label {
-    background-color: #007bff;
-    color: white;
-    border-color: #007bff;
+    background-color: #ffcc00;
+    border-color: #bd0000;
 }
 
 /*Footer-----------------------------------------------*/

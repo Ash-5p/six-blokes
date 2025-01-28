@@ -43,6 +43,10 @@ class Booking(models.Model):
     def name(self):
         return self.user.first_name
 
+    @property
+    def email(self):
+        return self.user.email
+
     def __str__(self):
         return f"Booking for {self.name} on {self.date}"
         
