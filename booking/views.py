@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.models import User
 from django.views import generic
 from django.contrib import messages
+from django.http import HttpResponseRedirect
 from .models import Booking, Allergen
 from .forms import BookingForm
 
@@ -40,3 +41,20 @@ def booking_list_view(request):
         "booking/booking_list.html",
         {"user_bookings": user_bookings}
     )
+
+
+def booking_delete(request, booking_id):
+    """
+    Delete an individual booking.
+
+    **Context**
+
+    ``booking``
+        A single booking.
+    """    
+    booking = get_object_or_404(Booking, pk=booking_id)
+
+    booking.delete()
+    messages.add_message(request, messages.SUCCESS, 'Booking deleted!')
+  
+    return HttpResponseRedirect(reverse('booking_list'))

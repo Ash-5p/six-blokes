@@ -1,41 +1,80 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <div class="container text-center booking-list">
-        <div class="row">
-                <div class="col-md-8 mt-3 offset-md-2">
-                        <h3>Upcoming Bookings</h3>
-                        {% if user_bookings %}
-                        <table class="user-bookings">
-                                <tr>
-                                        <th>Booking Date</th>
-                                        <th>Time Slot</th>
-                                        <th>Number of Guests</th>
-                                        <th>Allergies</th>
-                                        <th>Edit Booking</th>
-                                        <th>Delete Booking</th>
-                                </tr>
-                                {% for booking in user_bookings %}
-                                <tr class="booking-entry">
-                                        <td>{{ booking.date }}</td>
-                                        <td>{{ booking.time_slot }}:00</td>
-                                        <td>{{ booking.guests }}</td>
-                                        <td>
-                                                <ul>
-                                                        {% for allergy in booking.allergies.all %}
-                                                        <li class="list-unstyled flex-column">{{ allergy.name }}</li>
-                                                        {% endfor %}
-                                                </ul>
-                                        </td>
-                                        <td><button><i class="fa-solid fa-pencil"></i></button></td>
-                                        <td><button><i class="fa-solid fa-x"></i></button></td>
-                                </tr>
-                                {% endfor %}
-                        </table>
-                        {% else %}
-                        <p>You currently have no upcoming bookings</p>
-                        {% endif %}
-                </div>
-        </div>
+  <div class="row">
+    <div class="col-md-8 mt-3 offset-md-2">
+      <h3>Upcoming Bookings</h3>
+      {% if user_bookings %}
+      <table class="user-bookings">
+        <tr>
+          <th>Booking Date</th>
+          <th>Time Slot</th>
+          <th>Number of Guests</th>
+          <th>Allergies</th>
+          <th>Edit Booking</th>
+          <th>Delete Booking</th>
+        </tr>
+        {% for booking in user_bookings %}
+        <tr class="booking-entry">
+          <td>{{ booking.date }}</td>
+          <td>{{ booking.time_slot }}:00</td>
+          <td>{{ booking.guests }}</td>
+          <td>
+            <ul>
+              {% for allergy in booking.allergies.all %}
+              <li class="list-unstyled flex-column">{{ allergy.name }}</li>
+              {% endfor %}
+            </ul>
+          </td>
+          <td>
+            <button class="edit-btn" data-booking_id="{{ booking.id }}">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+          </td>
+          <td>
+            <button class="delete-btn" data-booking_id="{{ booking.id }}">
+              <i class="fa-solid fa-x"></i>
+            </button>
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p>You currently have no upcoming bookings</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Delete confirmation modal -->
+<div
+  class="modal fade"
+  id="deleteModal"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="deleteModalLabel">Delete Booking?</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to delete your booking? This action cannot be
+        undone.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock %}
