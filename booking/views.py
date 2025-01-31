@@ -36,11 +36,43 @@ def booking_view(request):
 
 def booking_list_view(request):
     user_bookings = Booking.objects.filter(user=request.user)
+
+    context = {
+        'user_bookings': user_bookings,
+        'booking_form': BookingForm()
+    }
+
     return render(
         request,
         "booking/booking_list.html",
-        {"user_bookings": user_bookings}
+        context
+
     )
+
+def booking_edit(request, booking_id):
+    """
+    Edit an individual booking.
+
+    **Context**
+
+    ``booking``
+        A single booking.
+    """
+
+    booking_form = BookingForm()
+    
+    if request.method == "POST":
+
+        booking = get_object_or_404(Booking, pk=booking_id)
+        booking_form = BookingForm(data=request.POST, instance=booking)
+
+        if booking_form.is_valid():
+            booking = booking_form.save()
+            messages.add_message(request, messages.SUCCESS, 'Booking successfully updated!')
+        else:
+            messages.add_message(request, messages.ERROR, 'Error updating booking!')
+        
+    return HttpResponseRedirect(reverse('booking_list'))
 
 
 def booking_delete(request, booking_id):
@@ -54,7 +86,7 @@ def booking_delete(request, booking_id):
     """    
     booking = get_object_or_404(Booking, pk=booking_id)
 
-    booking.delete()
+    booking.save()
     messages.add_message(request, messages.SUCCESS, 'Booking deleted!')
   
     return HttpResponseRedirect(reverse('booking_list'))
