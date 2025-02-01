@@ -71,7 +71,7 @@
         when done.
         <form method="POST" id="edit-booking-form">
           {% csrf_token %} 
-          {{ booking_form | crispy }}
+          {{ booking_form }}
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Close

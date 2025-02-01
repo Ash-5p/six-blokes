@@ -160,6 +160,10 @@ input[id^="id_allergies_"],
     margin: 5px;
 }
 
+.modal input[id^="id_allergies_"], #div_id_allergies .form-check-input {
+    display: inline;
+}
+
 /*Footer-----------------------------------------------*/
 
 footer {
