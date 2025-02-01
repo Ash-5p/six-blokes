@@ -30,12 +30,10 @@ def booking_view(request):
         },
     )
 
-# class BookingList(generic.ListView):
-#     queryset = Booking.objects.all().order_by("-date")
-#     template_name = "booking/booking_list.html"
 
 def booking_list_view(request):
-    user_bookings = Booking.objects.filter(user=request.user)
+
+    user_bookings = Booking.objects.filter(user=request.user).order_by("date")
 
     context = {
         'user_bookings': user_bookings,
@@ -86,7 +84,7 @@ def booking_delete(request, booking_id):
     """    
     booking = get_object_or_404(Booking, pk=booking_id)
 
-    booking.save()
+    booking.delete()
     messages.add_message(request, messages.SUCCESS, 'Booking deleted!')
   
     return HttpResponseRedirect(reverse('booking_list'))
