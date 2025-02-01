@@ -58,7 +58,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="editeModalLabel">Modify Booking?</h5>
+        <h5 class="modal-title" id="editModalLabel">Modify Booking?</h5>
         <button
           type="button"
           class="btn-close"
@@ -69,20 +69,14 @@
       <div class="modal-body">
         Make the desired changes to your booking. Ensure to save your changes
         when done.
-        <form method="POST" action="{% url 'booking_list' %}" id="edit-booking-form">
+        <form method="POST" id="edit-booking-form">
           {% csrf_token %} 
           {{ booking_form | crispy }}
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Close
             </button>
-            <a id="saveConfirm" href="#" class="btn btn-primary"
-              >Save Changes</a
-            >
+            <button type="submit" class="btn btn-primary">Save Changes</button>
           </div>
         </form>
       </div>

@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.contrib.auth.models import User
 from django.views import generic
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from .models import Booking, Allergen
 from .forms import BookingForm
 
@@ -57,20 +57,25 @@ def booking_edit(request, booking_id):
         A single booking.
     """
 
-    booking_form = BookingForm()
-    
+    booking = get_object_or_404(Booking, pk=booking_id)
+
     if request.method == "POST":
-
-        booking = get_object_or_404(Booking, pk=booking_id)
         booking_form = BookingForm(data=request.POST, instance=booking)
-
         if booking_form.is_valid():
-            booking = booking_form.save()
-            messages.add_message(request, messages.SUCCESS, 'Booking successfully updated!')
+            booking_form.save()
+            messages.success(request, "Booking successfully updated!")
         else:
-            messages.add_message(request, messages.ERROR, 'Error updating booking!')
-        
-    return HttpResponseRedirect(reverse('booking_list'))
+            messages.error(request, "Error updating booking!")
+        return HttpResponseRedirect(reverse("booking_list"))
+
+    # If GET request, return JSON response with booking data (Suggested by ChatGPT)
+    return JsonResponse({
+        "date": booking.date.strftime("%Y-%m-%d"),
+        "time_slot": booking.time_slot,
+        "guests": booking.guests,
+        "allergies": list(booking.allergies.values_list("id", flat=True)),
+        "booking_notes": booking.booking_notes
+    })
 
 
 def booking_delete(request, booking_id):
