@@ -1,127 +1,170 @@
-{% load static %}
-
-{% url 'booking' as booking_url %}
-{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
+{% load static %} {% url 'booking' as booking_url %} 
+{% url 'account_login' as login_url %} 
+{% url 'account_signup' as signup_url %} 
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
 <html class="h-100" lang="en">
-
-<head>
+  <head>
     <title>Six Blokes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Google Fonts CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Just+Another+Hand&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abel&family=Irish+Grover&family=Just+Another+Hand&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
 
-</head>
-
-<body class="d-flex flex-column h-100 main-bg">
-
+  <body class="d-flex flex-column h-100 main-bg">
     <header class="container-fluid bg-dark">
+      <div class="mx-auto">
+        <a class="logo-container" href="{% url 'booking' %}">
+          <div class="logo"></div>
+        </a>
+      </div>
 
-        <div class="mx-auto">
-            <a class="logo-container" href="{% url 'booking' %}">
-                <div class="logo"></div>
-            </a>
+      <!-- Navigation -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid d-flex align-items-end">
+          <!-- Left Section: Navigation Links -->
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.path == home_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'home' %}"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.path == booking_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'booking' %}"
+                  >Book a Table</a
+                >
+              </li>
+              {% if user.is_authenticated %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.path == booking_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'booking_list' %}"
+                  >My Bookings</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'account_logout' %}"
+                  >Logout</a
+                >
+              </li>
+              {% else %}
+              <li class="nav-item">
+                <a
+                  class="nav-link {% if request.path == users_url %}active{% endif %}"
+                  aria-current="page"
+                  href="{% url 'signin_signup' %}"
+                  >Sign-in / Sign-up</a
+                >
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+
+          <!-- Right Section: Toggler Button -->
+          <button
+            class="navbar-toggler ms-auto burger-icon"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
         </div>
-
-        <!-- Navigation -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-            <div class="container-fluid d-flex align-items-end">
-
-                <!-- Left Section: Navigation Links -->
-                <div class="collapse navbar-collapse" id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == home_url %}active{% endif %}"
-                                aria-current="page" href="{% url 'home' %}">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == booking_url %}active{% endif %}"
-                                aria-current="page" href="{% url 'booking' %}">Book a Table</a>
-                        </li>
-                        {% if user.is_authenticated %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == booking_url %}active{% endif %}"
-                                aria-current="page" href="{% url 'booking_list' %}">My Bookings</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'account_logout' %}">Logout</a>
-                        </li>
-                        {% else %}
-                        <li class="nav-item">
-                            <a class="nav-link {% if request.path == users_url %}active{% endif %}" aria-current="page"
-                                href="{% url 'signin_signup' %}">Sign-in / Sign-up</a>
-                        </li>
-                        {% endif %}
-                    </ul>
-                </div>
-
-                <!-- Right Section: Toggler Button -->
-                <button class="navbar-toggler ms-auto burger-icon" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
-        </nav>
+      </nav>
     </header>
     {% if messages %}
     <section id="alerts">
-        {% for msg in messages %}
-        <!-- all django message tags mirror bootstrap, except error/danger -->
-        <aside
-            class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} rounded-0 text-center"
-            role="alert">
-            <h3>{{ msg }}</h3>
-        </aside>
-        {% endfor %}
+      {% for msg in messages %}
+      <!-- all django message tags mirror bootstrap, except error/danger -->
+      <aside
+        class="alert {% if msg.tags == 'error' %}alert-danger{% else %}alert-{{ msg.tags }}{% endif %} rounded-0 text-center"
+        role="alert"
+      >
+        <h3>{{ msg }}</h3>
+      </aside>
+      {% endfor %}
     </section>
     {% endif %}
 
     <main class="flex-shrink-0 main-bg">
-
-        {% if user.is_authenticated %}
-        <p class="text-end m-3">Welcome {{ user.first_name }}</p>
-        {% endif %}
-
-        {% block content %}
-        <!-- Content Goes here -->
-        {% endblock content %}
-
+      {% if user.is_authenticated %}
+      <p class="text-end m-3">Welcome {{ user.first_name }}</p>
+      {% endif %} {% block content %}
+      <!-- Content Goes here -->
+      {% endblock content %}
     </main>
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
-        <p class="m-0 text-center">Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742<i
-                class="fa-solid fa-envelope ms-3"></i> - info@sixblokes.com</p>
-        <p class="m-0 text-center">Follow us: <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square ms-3"></i></a>
-            <a href="https://www.x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter ms-3"></i></a>
-            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
-            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square ms-3"></i></a>
-        </p>
+      <p class="m-0 text-center">
+        Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742<i
+          class="fa-solid fa-envelope ms-3"
+        ></i>
+        - info@sixblokes.com
+      </p>
+      <p class="m-0 text-center">
+        Follow us:
+        <a href="https://www.facebook.com/" target="_blank"
+          ><i class="fab fa-facebook-square ms-3"></i
+        ></a>
+        <a href="https://www.x.com/" target="_blank"
+          ><i class="fa-brands fa-square-x-twitter ms-3"></i
+        ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><i class="fab fa-instagram-square ms-3"></i
+        ></a>
+        <a href="https://www.youtube.com/" target="_blank"
+          ><i class="fab fa-youtube-square ms-3"></i
+        ></a>
+      </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous">
-    </script>
-    <script src="https://kit.fontawesome.com/84138e39d8.js" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/84138e39d8.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="{% static 'js/bookings.js' %}"></script>
-</body>
-
+  </body>
 </html>
