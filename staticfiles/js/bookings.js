@@ -23,7 +23,7 @@ for (let button of editButtons) {
     let bookingId = e.currentTarget.getAttribute("data-booking_id");
 
     // Fetch booking details via AJAX
-    fetch(`/booking_list/edit_booking/${bookingId}`)
+    fetch(`/booking/booking_list/edit_booking/${bookingId}`)
       .then((response) => response.json())
       .then((data) => {
         editDate.value = data.date;
@@ -44,7 +44,7 @@ for (let button of editButtons) {
         }
 
         // Update the form action to point to the correct booking
-        editForm.action = `/booking_list/edit_booking/${bookingId}`;
+        editForm.action = `/booking/booking_list/edit_booking/${bookingId}`;
 
         // Show the modal
         bootstrapModal.show();
