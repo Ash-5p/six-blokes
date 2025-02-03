@@ -47,6 +47,10 @@
                 <div class="collapse navbar-collapse" id="navbarText">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
+                            <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                                aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link {% if request.path == booking_url %}active{% endif %}"
                                 aria-current="page" href="{% url 'booking' %}">Book a Table</a>
                         </li>
@@ -106,10 +110,10 @@
     <footer class="footer mt-auto py-3 bg-dark">
         <p class="m-0 text-center">Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742<i
                 class="fa-solid fa-envelope ms-3"></i> - info@sixblokes.com</p>
-        <p class="m-0 text-center">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fa-brands fa-square-x-twitter ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
+        <p class="m-0 text-center">Follow us: <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square ms-3"></i></a>
+            <a href="https://www.x.com/" target="_blank"><i class="fa-brands fa-square-x-twitter ms-3"></i></a>
+            <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square ms-3"></i></a>
+            <a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube-square ms-3"></i></a>
         </p>
     </footer>
 

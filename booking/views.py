@@ -47,6 +47,7 @@ def booking_list_view(request):
 
     )
 
+
 def booking_edit(request, booking_id):
     """
     Edit an individual booking.

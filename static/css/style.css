@@ -160,7 +160,7 @@ input[id^="id_allergies_"],
     margin: 5px;
 }
 
-.modal input[id^="id_allergies_"], #div_id_allergies .form-check-input {
+.modal input[id^="id_allergies_"] {
     display: inline;
 }
 

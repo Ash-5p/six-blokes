@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = ['127.0.0.1',
-    '.herokuapp.com']
+                 '.herokuapp.com']
 
 
 # Application definition
@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'django_summernote',
+    'home',
     'booking',
     'users',
 ]
