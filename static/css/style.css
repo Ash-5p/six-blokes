@@ -184,6 +184,19 @@ input[id^="id_allergies_"],
 
 /*Menu-----------------------------------------------*/
 
+.menu {
+    border-radius: 10px;
+}
+
+.menu h2 {
+    color: #ffcc00;
+    padding-top: 10px;
+}
+
+.menu .btn:hover {
+    color: white;
+}
+
 .menu-collapse {
     width: 100%;
 }
