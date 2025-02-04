@@ -1,38 +1,38 @@
 {% extends "base.html" %} {% block content %}
 <div class="container text-center">
+  <h2>Menu</h2>
   <div class="row">
     <div class="col">
-      <p class="homescreen-text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis
-        risus a risus maximus iaculis. Maecenas ac ultrices est, sit amet
-        consequat justo. Integer egestas sem vitae nisl volutpat, at gravida
-        arcu elementum. Praesent dictum iaculis pulvinar. Nam imperdiet nisi at
-        turpis lacinia, ac convallis augue luctus. Ut ut metus non risus congue
-        aliquet eu ac velit. Donec facilisis non arcu non sollicitudin.
+      <p class="d-inline-flex gap-1 menu-collapse">
+        <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStarters" aria-expanded="false" aria-controls="collapseStarters">
+            <h3>Starter</h3>
+            <img src="" alt="starter">
+            <h3><i class="fa-solid fa-caret-down"></i></h3>
+        </button>
       </p>
+      <div class="collapse" id="collapseStarters">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
-    <div class="col d-flex justify-content-center">
-        <img
-          id="homescreen-image"
-          src="../../../static/images/founders.jpg"
-          alt="jerry-terry-harry-barry-garry-larry"
-        />
+    <div class="col">
+      <p class="d-inline-flex gap-1 menu-collapse">
+        <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBurgers" aria-expanded="false" aria-controls="collapseBurgers">
+            <h3>Burgers</h3>
+            <img src="" alt="starter">
+            <h3><i class="fa-solid fa-caret-down"></i></h3>
+        </button>
+      </p>
+      <div class="collapse" id="collapseBurgers">
+        <div class="card card-body">
+          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col">
-        <p class="homescreen-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis
-          risus a risus maximus iaculis. Maecenas ac ultrices est, sit amet
-          consequat justo. Integer egestas sem vitae nisl volutpat, at gravida
-          arcu elementum. Praesent dictum iaculis pulvinar. Nam imperdiet nisi
-          at turpis lacinia, ac convallis augue luctus. Ut ut metus non risus
-          congue aliquet eu ac velit. Donec facilisis non arcu non sollicitudin.
-        </p>
-      </div>
-    </div>
+  </div>
     {% endblock %}
   </div>
 </div>
