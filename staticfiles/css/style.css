@@ -15,6 +15,10 @@ main {
     border: 1px solid #ffcc00;
 }
 
+h2 {
+    color: #bd0000;
+}
+
 /*Header-----------------------------------------------*/
 
 header {
@@ -176,6 +180,33 @@ input[id^="id_allergies_"],
 
 .modal input[id^="id_allergies_"] {
     display: inline;
+}
+
+/*Menu-----------------------------------------------*/
+
+.menu {
+    border-radius: 10px;
+}
+
+.menu h2 {
+    color: #ffcc00;
+    padding-top: 10px;
+}
+
+.menu .btn:hover {
+    color: white;
+}
+
+.menu-collapse {
+    width: 100%;
+}
+
+.menu-collapse>h3 {
+    margin-bottom: 0;
+}
+
+.collapse>.card-body {
+    margin-bottom: 20px;
 }
 
 /*Footer-----------------------------------------------*/
