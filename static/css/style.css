@@ -15,6 +15,10 @@ main {
     border: 1px solid #ffcc00;
 }
 
+h2 {
+    color: #bd0000;
+}
+
 /*Header-----------------------------------------------*/
 
 header {
