@@ -207,8 +207,46 @@ input[id^="id_allergies_"],
 
 .collapse>.card-body {
     margin-bottom: 20px;
+    border: none;
 }
 
+.menu .card-body>ul {
+    border-bottom: solid;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5em;
+}
+
+.menu-item li {
+    padding: 5px;
+}
+
+.menu-description {
+    font-size: 16px;
+}
+
+.menu-allergens {
+    font-size: 16px;
+    padding-left: 0;
+}
+
+.menu-image-container {
+    height: 20vw;
+    width: 20vw;
+}
+
+.menu-image-container .scale {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
 /*Footer-----------------------------------------------*/
 
 footer {

@@ -220,7 +220,21 @@ input[id^="id_allergies_"],
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: center;
     font-size: 1.5em;
+}
+
+.menu-item li {
+    padding: 5px;
+}
+
+.menu-description {
+    font-size: 16px;
+}
+
+.menu-allergens {
+    font-size: 16px;
+    padding-left: 0;
 }
 
 .menu-image-container {
@@ -231,6 +245,7 @@ input[id^="id_allergies_"],
 .menu-image-container .scale {
     height: 100%;
     width: 100%;
+    border-radius: 10px;
 }
 /*Footer-----------------------------------------------*/
 

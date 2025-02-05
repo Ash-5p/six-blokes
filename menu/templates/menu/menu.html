@@ -55,9 +55,33 @@
       </p>
       <div class="collapse" id="collapseBurgers">
         <div class="card card-body bg-dark">
-          
-          <!-- List of burgers -->
-
+          {% if menu_burgers %}
+          {% for item in menu_burgers %}
+          <ul class="list-unstyled menu-item">
+            <li class="menu-name">{{ item.name }}</li>
+            <li class="menu-description">{{ item.description }}</li>
+            <li>
+              <ul class="menu-allergens">
+                Contains:
+                {% for allergen in item.allergens.all %}
+                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="menu-image">
+              <div class="menu-image-container">
+                {% if "placeholder" in item.item_image.url %}
+                <img src="{% static 'images\default-menu.png' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ item.item_image.url }}" class="scale" alt="{{ item.name }}">
+                {% endif %}
+              </div>
+            </li>
+        </ul>
+          {% endfor %}
+          {% else %}
+          <p>No items to show</p>
+          {% endif %}
         </div>
       </div>
     </div>
@@ -73,7 +97,119 @@
       <div class="collapse" id="collapseSides">
         <div class="card card-body bg-dark">
           
-          <!-- List of sides -->
+          {% if menu_sides %}
+          {% for item in menu_sides %}
+          <ul class="list-unstyled menu-item">
+            <li class="menu-name">{{ item.name }}</li>
+            <li class="menu-description">{{ item.description }}</li>
+            <li>
+              <ul class="menu-allergens">
+                Contains:
+                {% for allergen in item.allergens.all %}
+                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="menu-image">
+              <div class="menu-image-container">
+                {% if "placeholder" in item.item_image.url %}
+                <img src="{% static 'images\default-menu.png' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ item.item_image.url }}" class="scale" alt="{{ item.name }}">
+                {% endif %}
+              </div>
+            </li>
+        </ul>
+          {% endfor %}
+          {% else %}
+          <p>No items to show</p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="d-inline-flex gap-1 menu-collapse">
+        <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesserts" aria-expanded="false" aria-controls="collapseDesserts">
+            <h3>Sides</h3>
+            <h3><i class="fa-solid fa-caret-down"></i></h3>
+        </button>
+      </p>
+      <div class="collapse" id="collapseDesserts">
+        <div class="card card-body bg-dark">
+          
+          {% if menu_desserts %}
+          {% for item in menu_desserts %}
+          <ul class="list-unstyled menu-item">
+            <li class="menu-name">{{ item.name }}</li>
+            <li class="menu-description">{{ item.description }}</li>
+            <li>
+              <ul class="menu-allergens">
+                Contains:
+                {% for allergen in item.allergens.all %}
+                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="menu-image">
+              <div class="menu-image-container">
+                {% if "placeholder" in item.item_image.url %}
+                <img src="{% static 'images\default-menu.png' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ item.item_image.url }}" class="scale" alt="{{ item.name }}">
+                {% endif %}
+              </div>
+            </li>
+        </ul>
+          {% endfor %}
+          {% else %}
+          <p>No items to show</p>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <p class="d-inline-flex gap-1 menu-collapse">
+        <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDrinks" aria-expanded="false" aria-controls="collapseDrinks">
+            <h3>Sides</h3>
+            <h3><i class="fa-solid fa-caret-down"></i></h3>
+        </button>
+      </p>
+      <div class="collapse" id="collapseDrinks">
+        <div class="card card-body bg-dark">
+          
+          {% if menu_drinks %}
+          {% for item in menu_drinks %}
+          <ul class="list-unstyled menu-item">
+            <li class="menu-name">{{ item.name }}</li>
+            <li class="menu-description">{{ item.description }}</li>
+            <li>
+              <ul class="menu-allergens">
+                Contains:
+                {% for allergen in item.allergens.all %}
+                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="menu-image">
+              <div class="menu-image-container">
+                {% if "placeholder" in item.item_image.url %}
+                <img src="{% static 'images\default-menu.png' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ item.item_image.url }}" class="scale" alt="{{ item.name }}">
+                {% endif %}
+              </div>
+            </li>
+        </ul>
+          {% endfor %}
+          {% else %}
+          <p>No items to show</p>
+          {% endif %}
 
         </div>
       </div>
