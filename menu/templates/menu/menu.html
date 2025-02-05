@@ -1,4 +1,6 @@
-{% extends "base.html" %} {% block content %}
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
 <div class="container text-center bg-dark menu">
   <h2>Menu</h2>
   <div class="row">
@@ -6,19 +8,33 @@
       <p class="d-inline-flex gap-1 menu-collapse">
         <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseStarters" aria-expanded="false" aria-controls="collapseStarters">
             <h3>Starter</h3>
-            <img src="" alt="starter">
             <h3><i class="fa-solid fa-caret-down"></i></h3>
         </button>
       </p>
       <div class="collapse" id="collapseStarters">
-        <div class="card card-body">
+        <div class="card card-body bg-dark">
           {% if menu_starters %}
           {% for item in menu_starters %}
-          <ul>
-          <li>{{ item.name }}</li>
-          <li>{{ item.description }}</li>
-          <li>{{ item.allergens }}</li>
-          <li>{{ item.item_image }}</li>
+          <ul class="list-unstyled menu-item">
+            <li class="menu-name">{{ item.name }}</li>
+            <li class="menu-description">{{ item.description }}</li>
+            <li>
+              <ul class="menu-allergens">
+                Contains:
+                {% for allergen in item.allergens.all %}
+                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
+                {% endfor %}
+              </ul>
+            </li>
+            <li class="menu-image">
+              <div class="menu-image-container">
+                {% if "placeholder" in item.item_image.url %}
+                <img src="{% static 'images\default-menu.png' %}" class="scale" alt="placeholder image">
+                {% else %}
+                <img src="{{ item.item_image.url }}" class="scale" alt="{{ item.name }}">
+                {% endif %}
+              </div>
+            </li>
         </ul>
           {% endfor %}
           {% else %}
@@ -34,13 +50,14 @@
       <p class="d-inline-flex gap-1 menu-collapse">
         <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseBurgers" aria-expanded="false" aria-controls="collapseBurgers">
             <h3>Burgers</h3>
-            <img src="" alt="burgers">
             <h3><i class="fa-solid fa-caret-down"></i></h3>
         </button>
       </p>
       <div class="collapse" id="collapseBurgers">
-        <div class="card card-body">
-          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        <div class="card card-body bg-dark">
+          
+          <!-- List of burgers -->
+
         </div>
       </div>
     </div>
@@ -50,13 +67,14 @@
       <p class="d-inline-flex gap-1 menu-collapse">
         <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSides" aria-expanded="false" aria-controls="collapseSides">
             <h3>Sides</h3>
-            <img src="" alt="sides">
             <h3><i class="fa-solid fa-caret-down"></i></h3>
         </button>
       </p>
       <div class="collapse" id="collapseSides">
-        <div class="card card-body">
-          Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+        <div class="card card-body bg-dark">
+          
+          <!-- List of sides -->
+
         </div>
       </div>
     </div>

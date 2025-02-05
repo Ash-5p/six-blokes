@@ -207,8 +207,31 @@ input[id^="id_allergies_"],
 
 .collapse>.card-body {
     margin-bottom: 20px;
+    border: none;
 }
 
+.menu .card-body>ul {
+    border-bottom: solid;
+    padding-bottom: 10px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.menu-image-container {
+    height: 20vw;
+    width: 20vw;
+}
+
+.menu-image-container .scale {
+    height: 100%;
+    width: 100%;
+}
 /*Footer-----------------------------------------------*/
 
 footer {
