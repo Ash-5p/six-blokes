@@ -51,6 +51,7 @@ for (let button of editButtons) {
         console.log(data.allergies)
       })
         
+
       .catch((error) => console.error("Error fetching booking:", error));
   });
 };

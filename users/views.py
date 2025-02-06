@@ -1,9 +1,10 @@
 from allauth.account.forms import LoginForm
-from django.contrib.auth import authenticate, login
-from django.views import generic
-from django.shortcuts import render, get_object_or_404, reverse, redirect
+from django.contrib.auth import authenticate, login, logout
+from django.http import JsonResponse
+from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import CustomSignupForm
+
 
 def login_and_signup_view(request):
     if request.method == "POST":
@@ -43,3 +44,9 @@ def login_and_signup_view(request):
         signup_form = CustomSignupForm()
 
     return render(request, "users/signin_signup.html", {"login_form": login_form, "signup_form": signup_form})
+
+
+def logout_modal_view(request):
+    if request.method == "POST":
+        logout(request)
+        return JsonResponse({"message": "Logged out successfully"}, status=200)

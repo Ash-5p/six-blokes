@@ -626,6 +626,8 @@ Looking for some media files? Here are some popular sites to use. The list of ex
     - [Lorem Picsum](https://picsum.photos) (placeholder images)
     - [Wallhere](https://wallhere.com) (wallpaper / backgrounds)
     - [This Person Does Not Exist](https://thispersondoesnotexist.com) (reload to get a new person)
+    - [Transparent Image]()
+
 - Audio
     - [Audio Micro](https://www.audiomicro.com/free-sound-effects)
 - Video
@@ -650,6 +652,8 @@ A few examples have been provided below to give you some ideas on how to do your
 | [TinyPNG](https://tinypng.com) | Compressing images < 5MB |
 | [CompressPNG](https://compresspng.com) | Compressing images > 5MB |
 | [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
+
+| [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png) | Placeholder image for menu |
 
 ### Acknowledgements
 
