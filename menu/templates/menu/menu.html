@@ -17,14 +17,15 @@
           {% for item in menu_starters %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}</li>
-            <li>
-              <ul class="menu-allergens">
-                Contains:
-                {% for allergen in item.allergens.all %}
-                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
-                {% endfor %}
-              </ul>
+            <li class="menu-description">{{ item.description }}<br>
+              <span class="menu-allergens">
+                {% if item.allergens.all %}
+                  ({{ item.allergens.all|join:", " }})
+                {% endif %}
+              </span>
+              
+            
+              
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -59,14 +60,12 @@
           {% for item in menu_burgers %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}</li>
-            <li>
-              <ul class="menu-allergens">
-                Contains:
-                {% for allergen in item.allergens.all %}
-                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
-                {% endfor %}
-              </ul>
+            <li class="menu-description">{{ item.description }}<br>
+              <span class="menu-allergens">
+                {% if item.allergens.all %}
+                  ({{ item.allergens.all|join:", " }})
+                {% endif %}
+              </span>              
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -101,15 +100,14 @@
           {% for item in menu_sides %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}</li>
-            <li>
-              <ul class="menu-allergens">
-                Contains:
-                {% for allergen in item.allergens.all %}
-                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
-                {% endfor %}
-              </ul>
+            <li class="menu-description">{{ item.description }}<br>
+              <span class="menu-allergens">
+                {% if item.allergens.all %}
+                  ({{ item.allergens.all|join:", " }})
+                {% endif %}
+              </span>              
             </li>
+            
             <li class="menu-image">
               <div class="menu-image-container">
                 {% if "placeholder" in item.item_image.url %}
@@ -133,7 +131,7 @@
     <div class="col">
       <p class="d-inline-flex gap-1 menu-collapse">
         <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDesserts" aria-expanded="false" aria-controls="collapseDesserts">
-            <h3>Sides</h3>
+            <h3>Desserts</h3>
             <h3><i class="fa-solid fa-caret-down"></i></h3>
         </button>
       </p>
@@ -144,15 +142,15 @@
           {% for item in menu_desserts %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}</li>
-            <li>
-              <ul class="menu-allergens">
-                Contains:
-                {% for allergen in item.allergens.all %}
-                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
-                {% endfor %}
-              </ul>
+            <li class="menu-description">{{ item.description }}<br>
+              <span class="menu-allergens">
+                {% if item.allergens.all %}
+                  ({{ item.allergens.all|join:", " }})
+                {% endif %}
+              </span>
+              
             </li>
+            
             <li class="menu-image">
               <div class="menu-image-container">
                 {% if "placeholder" in item.item_image.url %}
@@ -176,7 +174,7 @@
     <div class="col">
       <p class="d-inline-flex gap-1 menu-collapse">
         <button class="btn menu-collapse d-flex justify-content-between align-items-center" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDrinks" aria-expanded="false" aria-controls="collapseDrinks">
-            <h3>Sides</h3>
+            <h3>Drinks</h3>
             <h3><i class="fa-solid fa-caret-down"></i></h3>
         </button>
       </p>
@@ -187,15 +185,15 @@
           {% for item in menu_drinks %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}</li>
-            <li>
-              <ul class="menu-allergens">
-                Contains:
-                {% for allergen in item.allergens.all %}
-                <li class="list-unstyled flex-column">{{ allergen.name }}</li>
-                {% endfor %}
-              </ul>
+            <li class="menu-description">{{ item.description }}<br>
+              <span class="menu-allergens">
+                {% if item.allergens.all %}
+                  ({{ item.allergens.all|join:", " }})
+                {% endif %}
+              </span>
+              
             </li>
+            
             <li class="menu-image">
               <div class="menu-image-container">
                 {% if "placeholder" in item.item_image.url %}
