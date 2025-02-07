@@ -128,6 +128,10 @@
     </section>
     {% endif %}
 
+    <form id="logoutForm" method="POST" action="{% url 'logout_modal' %}">
+      {% csrf_token %}
+  </form>
+
     <!-- Logout Confirmation Modal -->
     <aside class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
       <div class="modal-dialog">

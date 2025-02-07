@@ -1,7 +1,7 @@
 from allauth.account.forms import LoginForm
 from django.contrib.auth import authenticate, login, logout
-from django.http import JsonResponse
 from django.shortcuts import render, redirect
+from django.http import JsonResponse
 from django.contrib import messages
 from .forms import CustomSignupForm
 
@@ -49,4 +49,8 @@ def login_and_signup_view(request):
 def logout_modal_view(request):
     if request.method == "POST":
         logout(request)
-        return JsonResponse({"message": "Logged out successfully"}, status=200)
+        messages.success(request, "Logged out successfully")
+        return redirect("/")
+    else:
+        messages.error(request, "Logout failed")
+        return redirect("/")
