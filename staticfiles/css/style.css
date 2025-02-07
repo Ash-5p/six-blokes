@@ -22,7 +22,7 @@ h2 {
 /*Header-----------------------------------------------*/
 
 header {
-    height: 202px
+    
 }
 
 .logo-container {
@@ -36,14 +36,13 @@ header {
     background-image: url(../images/logo.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    height: 202px;
-    width: 400px;
-    background-position: 50% 30%;
+    height: 150px;
+    width: 200px;
     z-index: 1;
 }
 
 .navbar {
-    margin-top: -68px;
+    
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -61,13 +60,6 @@ header {
     flex-grow: 0;
     align-items: center;
 }
-
-
-
-.bg-dark {
-    padding-top: 0;
-}
-
 
 
 .navbar-light .navbar-nav .nav-link:focus,

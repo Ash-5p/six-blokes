@@ -1,6 +1,7 @@
-{% load static %} {% url 'booking' as booking_url %} 
-{% url 'account_login' as login_url %} 
-{% url 'account_signup' as signup_url %} 
+{% load static %}
+{% url 'booking' as booking_url %} 
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
 {% url 'account_logout' as logout_url %}
 
 <!DOCTYPE html>
@@ -36,12 +37,6 @@
 
   <body class="d-flex flex-column h-100 main-bg">
     <header class="container-fluid bg-dark">
-      <div class="mx-auto">
-        <a class="logo-container" href="{% url 'booking' %}">
-          <div class="logo"></div>
-        </a>
-      </div>
-
       <!-- Navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-dark">
         <div class="container-fluid d-flex align-items-end">
@@ -82,9 +77,14 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                <a
+                  class="nav-link"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#logoutModal"
+                >
                   Logout
-              </a>
+                </a>
               </li>
               {% else %}
               <li class="nav-item">
@@ -97,6 +97,14 @@
               </li>
               {% endif %}
             </ul>
+          </div>
+
+          <!-- Logo -->
+
+          <div>
+            <a class="logo-container" href="{% url 'home' %}">
+              <div class="logo"></div>
+            </a>
           </div>
 
           <!-- Right Section: Toggler Button -->
@@ -130,22 +138,39 @@
 
     <form id="logoutForm" method="POST" action="{% url 'logout_modal' %}">
       {% csrf_token %}
-  </form>
+    </form>
 
     <!-- Logout Confirmation Modal -->
-    <aside class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <aside
+      class="modal fade"
+      id="logoutModal"
+      tabindex="-1"
+      aria-labelledby="logoutModalLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title" id="logoutModalLabel">Confirm Logout</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
           </div>
-          <div class="modal-body">
-            Are you sure you want to log out?
-          </div>
+          <div class="modal-body">Are you sure you want to log out?</div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
-            <button type="button" id="confirmLogout" class="btn btn-danger">Logout</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <button type="button" id="confirmLogout" class="btn btn-danger">
+              Logout
+            </button>
           </div>
         </div>
       </div>
