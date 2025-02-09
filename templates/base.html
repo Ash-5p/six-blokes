@@ -179,7 +179,7 @@
 
     <main class="flex-shrink-0 main-bg">
       {% if user.is_authenticated %}
-      <p class="text-end m-3">Welcome {{ user.first_name }}</p>
+      <p class="text-center">You are logged in as {{ user.first_name }}</p>
       {% endif %} {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}
@@ -187,7 +187,7 @@
 
     <!-- Footer -->
     <footer class="footer mt-auto py-3 bg-dark">
-      <p class="m-0 text-center">
+      <p class="m-0 text-center contact-us">
         Contact us: <i class="fa-solid fa-phone ms-3"></i> - 01783 448742<i
           class="fa-solid fa-envelope ms-3"
         ></i>

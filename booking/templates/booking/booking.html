@@ -5,11 +5,11 @@
 <div class="container text-center bg-dark sign-in-box">
         <div class="row">
                 <div class="col-md-8 mt-3 offset-md-2">
-                        <h3>Book a Table</h3>
+                        <h2 class="form-header">Book a Table</h2>
                 </div>
         </div>
         <div class="row">
-                <div class="col-md-8 mt-3 offset-md-2">
+                <div class="col-md-10 mt-3 m-auto">
                         {% if user.is_authenticated %}
                         <form method="POST" action="{% url 'booking' %}" id="booking-form">
                                 {% csrf_token %}
