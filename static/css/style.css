@@ -16,9 +16,23 @@ main {
     font-size: 16px;
 }
 
+.btn-secondary:hover,
+.btn-danger:hover {
+    border-color: #f0f0f0;
+    color: #f0f0f0;
+}
+
 h2 {
     color: #bd0000;
     font-family: "Irish Grover", serif;
+}
+
+h5 {
+    font-size: 1.5em;
+}
+
+th {
+    font-weight: 100;
 }
 
 .form-header {
@@ -27,6 +41,10 @@ h2 {
 
 .modal-content {
     background-color: #212529;
+}
+
+.modal-body {
+    font-size: 1.2em;
 }
 
 .modal-header,
@@ -191,6 +209,12 @@ input[id^="id_allergies_"],
     padding-bottom: 0;
 }
 
+.user-bookings button:hover {
+    border: solid #ffcc00;
+    background-color: black;
+    color: #ffcc00;
+}
+
 .user-bookings ul {
     display: inline-flex;
     flex-wrap: wrap;
@@ -319,7 +343,7 @@ footer a {
 
     /*General-----------------------------------------------*/
 
-    .btn {
+    form>.btn {
         font-size: 1.5em;
     }
     
