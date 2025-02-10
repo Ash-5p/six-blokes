@@ -1,9 +1,8 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
-from django.contrib.auth.models import User
-from django.views import generic
+from django.utils.timezone import now
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
-from .models import Booking, Allergen
+from .models import Booking
 from .forms import BookingForm
 
 # Create your views here.
@@ -33,7 +32,7 @@ def booking_view(request):
 
 def booking_list_view(request):
 
-    user_bookings = Booking.objects.filter(user=request.user).order_by("date")
+    user_bookings = Booking.objects.filter(user=request.user).order_by("date").filter(user=request.user, date__gte=now().date())
 
     context = {
         'user_bookings': user_bookings,

@@ -412,6 +412,17 @@ footer a {
 
 @media screen and (min-width: 768px) {
 
+    /*Existing Bookings-----------------------------------------------*/
+
+    .user-bookings {
+        font-size: 1.2em;
+    }
+
+    .user-bookings button {
+        height: 40px;
+        width: 40px;
+    }
+
     /*Menu-----------------------------------------------*/
 
     .menu-name {
@@ -439,6 +450,17 @@ footer a {
         height: 200px;
         width: 350px;
         margin-left: -110%;
+    }
+
+    /*Existing Bookings-----------------------------------------------*/
+
+    .user-bookings {
+        font-size: 1.5em;
+    }
+
+    .user-bookings button {
+        height: 40px;
+        width: 40px;
     }
 
 }
