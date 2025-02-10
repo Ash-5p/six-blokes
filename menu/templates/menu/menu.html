@@ -17,12 +17,12 @@
           {% for item in menu_starters %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}<br>
-              <span class="menu-allergens">
+            <li class="menu-description">{{ item.description }}
+              <div class="menu-allergens">
                 {% if item.allergens.all %}
                   ({{ item.allergens.all|join:", " }})
                 {% endif %}
-              </span>            
+              </div>            
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -57,12 +57,12 @@
           {% for item in menu_burgers %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}<br>
-              <span class="menu-allergens">
+            <li class="menu-description">{{ item.description }}
+              <div class="menu-allergens">
                 {% if item.allergens.all %}
                   ({{ item.allergens.all|join:", " }})
                 {% endif %}
-              </span>              
+              </div>              
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -97,12 +97,12 @@
           {% for item in menu_sides %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}<br>
-              <span class="menu-allergens">
+            <li class="menu-description">{{ item.description }}
+              <div class="menu-allergens">
                 {% if item.allergens.all %}
                   ({{ item.allergens.all|join:", " }})
                 {% endif %}
-              </span>
+              </div>
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -139,12 +139,12 @@
           {% for item in menu_desserts %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}<br>
-              <span class="menu-allergens">
+            <li class="menu-description">{{ item.description }}
+              <div class="menu-allergens">
                 {% if item.allergens.all %}
                   ({{ item.allergens.all|join:", " }})
                 {% endif %}
-              </span>              
+              </div>              
             </li>
             <li class="menu-image">
               <div class="menu-image-container">
@@ -180,12 +180,12 @@
           {% for item in menu_drinks %}
           <ul class="list-unstyled menu-item">
             <li class="menu-name">{{ item.name }}</li>
-            <li class="menu-description">{{ item.description }}<br>
-              <span class="menu-allergens">
+            <li class="menu-description">{{ item.description }}
+              <div class="menu-allergens">
                 {% if item.allergens.all %}
                   ({{ item.allergens.all|join:", " }})
                 {% endif %}
-              </span>              
+              </div>              
             </li>
             <li class="menu-image">
               <div class="menu-image-container">

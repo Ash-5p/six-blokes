@@ -269,7 +269,7 @@ input[id^="id_allergies_"],
 .menu-item {
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     font-size: 1.5em;
@@ -279,18 +279,28 @@ input[id^="id_allergies_"],
     padding: 5px;
 }
 
-.menu-description {
+.menu-item {
     font-size: 16px;
 }
 
+.menu-description {
+    width: 65%;
+}
+
 .menu-allergens {
-    font-size: 16px;
     padding-left: 0;
+}
+
+.menu-name {
+    width: 100%;
+    font-size: 1.2em;
 }
 
 .menu-image-container {
     height: 20vw;
     width: 20vw;
+    max-height: 154px;
+    max-width: 154px;
 }
 
 .menu-image-container .scale {
@@ -330,6 +340,17 @@ footer a {
     .form-check {
         width: 33%;
         padding: 2px 10px;
+    }
+
+    /*Menu-----------------------------------------------*/
+
+    .menu-item {
+        flex-wrap: nowrap;
+    }
+    
+    .menu-name {
+        width: fit-content;
+        font-size: 1.5em;
     }
 
     /*Footer-----------------------------------------------*/
@@ -381,7 +402,29 @@ footer a {
     .btn-signup {
         margin: auto;
     }
+
+    /*Menu-----------------------------------------------*/
+
+    .menu-item {
+        font-size: 20px;
+    }
 }
+
+@media screen and (min-width: 768px) {
+
+    /*Menu-----------------------------------------------*/
+
+    .menu-name {
+        width: 20%;
+    }
+
+    .menu-description {
+        font-size: 1.2em;
+        width: 45%;
+    }
+}
+    
+    
 
 @media screen and (min-width: 992px) {
     
