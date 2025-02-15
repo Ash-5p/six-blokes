@@ -654,6 +654,7 @@ A few examples have been provided below to give you some ideas on how to do your
 | [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
 
 | [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png) | Placeholder image for menu |
+| [removebg](https://www.remove.bg/) | Removing background from images |
 
 ### Acknowledgements
 
