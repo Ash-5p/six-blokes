@@ -403,17 +403,6 @@ footer a {
     padding: 2px 10px;
   }
 
-  /*Menu-----------------------------------------------*/
-
-  .menu-item {
-    flex-wrap: nowrap;
-  }
-
-  .menu-name {
-    width: fit-content;
-    font-size: 1.5em;
-  }
-
   /*Footer-----------------------------------------------*/
 
   .contact-us {
@@ -483,8 +472,14 @@ footer a {
 
   /*Menu-----------------------------------------------*/
 
+  .menu-item {
+    flex-wrap: nowrap;
+  }
+
   .menu-name {
     width: 20%;
+    width: fit-content;
+    font-size: 1.5em;
   }
 
   .menu-description {
