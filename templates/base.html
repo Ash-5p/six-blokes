@@ -181,7 +181,7 @@
 
     <main class="flex-shrink-0 main-bg">
       {% if user.is_authenticated %}
-      <p class="text-center">You are logged in as {{ user.first_name }}</p>
+      <p class="login-message">You are logged in as {{ user.first_name }}</p>
       {% endif %} {% block content %}
       <!-- Content Goes here -->
       {% endblock content %}

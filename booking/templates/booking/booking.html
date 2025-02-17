@@ -14,7 +14,7 @@
                         <form method="POST" action="{% url 'booking' %}" id="booking-form">
                                 {% csrf_token %}
                                 {{ booking_form | crispy }}
-                                <button class="btn btn-signup right" type="submit">Book Table</button>
+                                <button class="btn btn-signup btn-primary right" type="submit">Book Table</button>
                         </form>
                         {% else %}
                         <p>Please login to make a booking</p>

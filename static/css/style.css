@@ -52,6 +52,17 @@ th {
   border-color: #ffcc00;
 }
 
+.login-message {
+    margin: 0 10px 10px auto;
+    font-size: 1.1em;
+    border: solid 2px;
+    padding: 0 5px;
+    background-color: #212529;
+    border-radius: 5px;
+    width: fit-content;
+    box-shadow: #212529 2px 2px
+}
+
 /*Header-----------------------------------------------*/
 
 .logo-container {
@@ -132,6 +143,8 @@ th {
   width: 80vw;
   max-width: 455px;
   margin: 20px 0 30px 0;
+  border: solid 2px;
+  box-shadow: #212529 2px 2px;
 }
 
 /*Sign in/ Sign up-----------------------------------------------*/
@@ -415,6 +428,8 @@ input[id^="id_allergies_"],
   width: 100%;
   border-radius: 10px;
   object-fit: cover;
+  border: solid 2px;
+  box-shadow: #212529 2px 2px;
 }
 /*Footer-----------------------------------------------*/
 
