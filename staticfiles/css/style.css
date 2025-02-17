@@ -98,13 +98,12 @@ th {
   margin-right: -20px;
 }
 
-.navbar-toggler-icon>i {
-    border: solid 1px;
-    padding: 1px 2px;
-    border-radius: 3px;
-    font-size: 1.1em;
-  }
-
+.navbar-toggler-icon > i {
+  border: solid 1px;
+  padding: 1px 2px;
+  border-radius: 3px;
+  font-size: 1.1em;
+}
 
 .navbar-collapse {
   flex-basis: 100%;
@@ -137,8 +136,42 @@ th {
 
 /*Sign in/ Sign up-----------------------------------------------*/
 
-#signup-form > ul {
+.signin-signup-form > p {
+  display: flex;
+  justify-content: flex-end;
+  width: 82%;
+  margin: 10px auto;
+  max-width: 182px;
+}
+
+.signin-signup-form > p > label {
+  align-self: center;
+  flex-basis: 50%;
+}
+
+.signin-signup-form > p > input {
+  max-height: 29.2px;
+  flex-basis: 66%;
+}
+
+#signup-form > ul,
+#signup-form > ul + p,
+:has(+ #id_remember),
+#id_remember {
   display: none;
+}
+
+#signup-form > .errorlist {
+    width: 100%;
+  margin: auto;
+  list-style: none;
+  color: #bd0000;
+  justify-content: center;
+}
+
+#signup-form > .errorlist,
+#signup-form > .errorlist + p {
+  display: flex;
 }
 
 .sign-in-box {
@@ -147,6 +180,11 @@ th {
   max-width: 750px;
   border-radius: 10px;
   padding-bottom: 20px;
+}
+
+.btn-signup,
+.btn-signin {
+  padding: 1px 10px;
 }
 
 /*Booking Form-----------------------------------------------*/
@@ -403,6 +441,21 @@ footer a {
     width: 250px;
   }
 
+  /*Sign in/ Sign up-----------------------------------------------*/
+
+  .signin-signup-form {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 470px;
+    margin: auto;
+  }
+
+  .btn-signin,
+  .btn-signup {
+    margin: 10px 40%;
+  }
+
   /*Booking Form-----------------------------------------------*/
 
   .form-check {
@@ -418,12 +471,6 @@ footer a {
 }
 
 @media screen and (min-width: 565px) {
-  /*General-----------------------------------------------*/
-
-  form > .btn {
-    font-size: 1.5em;
-  }
-
   /*Booking Form-----------------------------------------------*/
 
   .form-label {
@@ -453,10 +500,6 @@ footer a {
 
   .form-check {
     width: 25%;
-  }
-
-  .btn-signup {
-    margin: auto;
   }
 
   /*Menu-----------------------------------------------*/

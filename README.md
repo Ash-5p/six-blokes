@@ -1,20 +1,17 @@
-# [six-blokes](https://six-blokes-6958fc1bfc25.herokuapp.com)
+# [![image](static/images/logo.png)](https://six-blokes-6958fc1bfc25.herokuapp.com)
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/Ash-5p/six-blokes)](https://www.github.com/Ash-5p/six-blokes/commits/main)
 [![GitHub last commit](https://img.shields.io/github/last-commit/Ash-5p/six-blokes)](https://www.github.com/Ash-5p/six-blokes/commits/main)
 [![GitHub repo size](https://img.shields.io/github/repo-size/Ash-5p/six-blokes)](https://www.github.com/Ash-5p/six-blokes)
 
-⚠️ INSTRUCTIONS ⚠️
+Welcome to Six Blokes, the UK's answer to Five Guys. This website's purpose is to promote the Six Blokes resturant by allowing users to view all the menu items on offer, and make, edit , and cancel reservations at the resturant.
+The website also offers backend fuctionality which allows admin level users to view all existing bookings, and add, modify, and delete menu items on the live site.
 
-In this section, include a few paragraphs providing an overview of your project. Essentially, this part is your "sales pitch". Describe what the project hopes to accomplish, who it is intended to target, and how it will be useful to the target audience.
-
-⚠️ --- END --- ⚠️
-
-🛑 NOTES 🛑
-
-Do not add a **Table of Contents** to your Markdown files. GitHub has these built-in automatically using the headers/hashtags.
-
-Don't add screenshots for the README/TESTING into your `assets` or `static` folders. Create a new folder at the root-level called `documentation`. Consider creating sub-directories within `documentation` to handle things like `wireframes`, `features`, `validation`, `responsiveness`, etc.
+Target Audience:
+- Foodies
+- Burger lovers
+- Members of Six Blokes
+- Anyone looking to taste the best burger of their life
 
 **Site Mockups**
 *([amiresponsive](https://ui.dev/amiresponsive?url=https://six-blokes-6958fc1bfc25.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
