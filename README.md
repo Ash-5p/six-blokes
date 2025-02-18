@@ -14,17 +14,8 @@ Target Audience:
 - Anyone looking to taste the best burger of their life
 
 **Site Mockups**
-*([amiresponsive](https://ui.dev/amiresponsive?url=https://six-blokes-6958fc1bfc25.herokuapp.com), [techsini](https://techsini.com/multi-mockup), etc.)*
-Having issues generating site mockups? This is likely due to security policies with your deployed site.
-If you open up your DevTools, there may be an error referencing `X-Frame-Options`.
 
-For Chrome users, head over to http://bit.ly/3iRPn4u and install the extension within your browser. Once installed, navigate back to the mockup site of your choice. You should find your site rendering in the various devices now.
-
-Alternatively, open your project in Gitpod and run the server. Once the site is running, click the `Ports` tab from your Gitpod Terminal. Click the padlock on the appropriate port for your project (`Flask: 5000`, `Django: 8000`). This will make your local page public temporarily. Now, copy the URL of your live-preview page into the responsive tool above. You should find your site rendering in the various devices.
-
-🛑 --- END ---- 🛑
-
-![screenshot](documentation/mockup.png)
+![screenshot](documentation/amiresponsive.png)
 
 source: [six-blokes amiresponsive](https://ui.dev/amiresponsive?url=https://six-blokes-6958fc1bfc25.herokuapp.com)
 
@@ -37,44 +28,45 @@ source: [six-blokes amiresponsive](https://ui.dev/amiresponsive?url=https://six-
 
 #### 1. Strategy Plane
 ##### Purpose
-- Provide blog owners with tools to create, manage, and moderate engaging blog content and user interactions.
-- Offer users and guests an intuitive platform to explore, engage, and contribute to blog discussions.
+- Provide restaurant owners/staff with tools to create, manage, and delete bookings, and menu items.
+- Offer users an intuitive platform to explore the restaurant's menu, and enable them to make/manage reservations.
 
 ##### Primary User Needs
-- Blog owners need seamless tools for publishing and managing posts and comments.
-- Registered users need the ability to engage with blog content through comments and account features.
-- Guests need the ability to browse and enjoy blog content without registration.
+- Restaurant owners/staff need seamless tools for viewing/managing customer bookings.
+- Restaurant owners/staff need seamless tools for adding, removing, and modifying menu items.
+- Registered users need the ability to create, modify, and delete their own bookings.
+- Guests need the ability to browse the menu and view the homepage without registration.
 
 ##### Business Goals
-- Foster a dynamic blogging platform with active user participation.
-- Build a sense of community through discussions and user engagement.
-- Ensure easy blog content management for owners.
+- Provide a platform to draw in customers by simplifying the booking process.
+- Allow easy browsing of a categorised menu, so users/guests can see all food on offer.
+- Ensure easy menu content management for owners/staff.
 
 #### 2. Scope Plane
 ##### Features
 - A full list of [Features](#features) can be viewed in detail below.
 
 ##### Content Requirements
-- Blog post management (create, update, delete, and preview).
-- Comment moderation and management tools.
-- User account features (register, log in, edit/delete comments).
-- Notification system for comment approval status.
+- Booking management (create, update, delete, and preview).
+- Menu management (create, update, delete, and preview).
+- User account features (register, log in, create/view/edit/delete bookings).
 - 404 error page for lost users.
 
 #### 3. Structure Plane
 ##### Information Architecture
 - **Navigation Menu**:
-  - Links to Home, Blog Posts, Login/Register, and Dashboard (for blog owners).
+  - Links to Home, Book a Table, Existing Bookings, Menu, Login/Register, and Dashboard (for site owners).
 - **Hierarchy**:
-  - Blog content displayed prominently for easy browsing.
-  - Clear call-to-action buttons for account creation and engagement (e.g., commenting).
+  - Homepage showing image of resturant & owners, intuitive navbar for site navigation.
+  - Menu is sorted using collapsable categories for easy browsing.
+  - Clear call-to-action buttons for account creation and interaction (e.g., creating bookings).
 
 ##### User Flow
-1. Guest users browse blog content → read posts and see commenter names.
-2. Guest users register for an account → log in to leave comments.
-3. Registered users leave comments → receive a pending approval notification.
-4. Blog owners create, update, and manage posts → moderate comments.
-5. Blog owners approve or reject comments → manage user interactions.
+1. Guest users browse homepage/menu → view menu items via categorised menu.
+2. Guest users register for an account → log in to create a booking.
+3. Registered users creates booking → gets redirected to existing bookings page where they can view/edit/delete upcoming bookings.
+4. Site owners/staff create, update, manage, and delete bookings → can create bookings on behalf of customers, allowing telephone bookings.
+5. Site owners/staff create, update, manage, and delete menu items → keep menu up to date.
 
 #### 4. Skeleton Plane
 ##### Wireframe Suggestions
@@ -87,33 +79,20 @@ source: [six-blokes amiresponsive](https://ui.dev/amiresponsive?url=https://six-
 
 ### Colour Scheme
 
-⚠️INSTRUCTIONS ⚠️
+I used [coolors.co](https://coolors.co/ffcc00-212529-bd0000-f9fafc) to generate my color palette.
 
-Explain your colors and color scheme. Consider adding a link and screenshot for your color scheme using [coolors](https://coolors.co/generate).
-
-When you add a color to the palette, the URL is dynamically updated, making it easier for you to return back to your color palette later if needed. See example below:
-
-⚠️ --- END --- ⚠️
-
-I used [coolors.co](https://coolors.co/080708-3772ff-df2935-fdca40-e6e8e6) to generate my color palette.
-
-- `#000000` primary text.
-- `#3772FF` primary highlights.
-- `#DF2935` secondary text.
-- `#FDCA40` secondary highlights.
+- `#FFCC00` primary text.
+- `#212529` primary highlights.
+- `#BD0000` secondary text.
+- `#F9FAFC` secondary highlights.
 
 ![screenshot](documentation/coolors.png)
 
 ### Typography
 
-⚠️ INSTRUCTIONS ⚠️
-
-Explain any fonts and icon libraries used, like **Google Fonts**, **Font Awesome**, etc. Consider adding a link to each font used, the Font Awesome site (if used), or similar icon library.
-
-⚠️ --- END --- ⚠️
-
-- [Montserrat](https://fonts.google.com/specimen/Montserrat) was used for the primary headers and titles.
-- [Lato](https://fonts.google.com/specimen/Lato) was used for all other secondary text.
+- [Irish Grover](https://fonts.google.com/specimen/Irish+Grover) was used for the primary headers and titles.
+- [Abel](https://fonts.google.com/specimen/Abel) was used for paragraph text on homepage.
+- [Just Another Hand](https://fonts.google.com/specimen/Just+Another+Hand) was used for all other secondary text.
 - [Font Awesome](https://fontawesome.com) icons were used throughout the site, such as the social media icons in the footer.
 
 ## User Stories
