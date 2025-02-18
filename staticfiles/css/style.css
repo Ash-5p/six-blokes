@@ -53,14 +53,14 @@ th {
 }
 
 .login-message {
-    margin: 0 10px 10px auto;
-    font-size: 1.1em;
-    border: solid 2px;
-    padding: 0 5px;
-    background-color: #212529;
-    border-radius: 5px;
-    width: fit-content;
-    box-shadow: #212529 2px 2px
+  margin: 0 10px 10px auto;
+  font-size: 1.1em;
+  border: solid 2px;
+  padding: 0 5px;
+  background-color: #212529;
+  border-radius: 5px;
+  width: fit-content;
+  box-shadow: #212529 2px 2px;
 }
 
 /*Header-----------------------------------------------*/
@@ -174,17 +174,29 @@ th {
   display: none;
 }
 
-#signup-form > .errorlist {
-    width: 100%;
+.signin-signup-form .errorlist {
+  width: 100%;
   margin: auto;
   list-style: none;
   color: #bd0000;
-  justify-content: center;
+  background-color: #f9fafc;
+  border: solid 2px #bd0000;
+  border-radius: 5px;
+  order: -1;
+}
+
+.signin-signup-form .errorlist li {
+  margin-left: -32px;
 }
 
 #signup-form > .errorlist,
 #signup-form > .errorlist + p {
   display: flex;
+  justify-content: center;
+}
+
+#signup-form > .errorlist {
+  flex-direction: column;
 }
 
 .sign-in-box {
@@ -199,6 +211,14 @@ th {
 .btn-signin {
   padding: 1px 10px;
 }
+
+/* .signin-signup-form .errorlist.nonfield {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+} */
 
 /*Booking Form-----------------------------------------------*/
 #div_id_allergies > div {
