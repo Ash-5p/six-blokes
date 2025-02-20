@@ -97,34 +97,31 @@ I used [coolors.co](https://coolors.co/ffcc00-212529-bd0000-f9fafc) to generate 
 
 ## User Stories
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, list all of your possible user stories for the project. Samples have been provided below using the example walkthrough project for your inspiration. Make sure to adjust to match your own project features!
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a blog owner | I would like to create new blog posts with a title, featured image, and content | so that I can share my experiences with my audience. |
-| As a blog owner | I would like to update existing blog posts | so that I can correct or add new information to my previous stories. |
-| As a blog owner | I would like to delete blog posts | so that I can remove outdated or irrelevant content from my blog. |
-| As a blog owner | I would like to retrieve a list of all my published blog posts | so that I can manage them from a central dashboard. |
-| As a blog owner | I would like to preview a post as draft before publishing it | so that I can ensure formatting and content appear correctly. |
-| As a blog owner | I would like to review comments before they are published | so that I can filter out spam or inappropriate content. |
-| As a blog owner | I would like to approve or reject comments from users | so that I can maintain control over the discussion on my posts. |
-| As a blog owner | I would like to view a list of all comments (both approved and pending) | so that I can manage user engagement effectively. |
-| As a blog owner | I would like to edit or delete user comments | so that I can clean up or remove inappropriate responses after they've been posted. |
-| As a registered user | I would like to log in to the site | so that I can leave comments on blog posts. |
-| As a registered user | I would like to register for an account | so that I can become part of the community and engage with the blog. |
-| As a registered user | I would like to leave a comment on a blog post | so that I can share my thoughts or ask questions about the owner's experiences. |
-| As a registered user | I would like my comment to show my name and the timestamp | so that others can see who I am and when I left the comment. |
-| As a registered user | I would like to receive a notification or message saying my comment is pending approval | so that I understand it hasn't been posted immediately. |
-| As a registered user | I would like to edit or delete my own comments | so that I can fix mistakes or retract my statement. |
-| As a guest user | I would like to read blog posts without registering | so that I can enjoy the content without needing to log in. |
-| As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. |
-| As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. |
-| As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. |
+| As a site admin | I would like to create, read, update and delete menu items | so that I can manage the menu when the resturant makes changes to its menu. |
+| As a site admin | I would like to create bookings| so that I can create a booking on behalf of a customer who books via telephone or email. |
+| As a site admin | I would like to edit bookings| so that I can edit a booking on behalf of a customer who books via telephone or email. |
+| As a site admin | I would like to view bookings| so that I can plan accordingly few upcoming bookings. |
+| As a site admin | I would like to delete bookings| so that I can cancel a booking on behalf of a customer who books via telephone or email. |
+| As a site admin | I would like the site to prevent overbooking| so that I don't have to manually go through bookings to inform customers if we are fully booked. |
+| As a registered user | I would like to log in to the site | so that I can create & manage bookings. |
+| As a registered user | I would like to log out of my account | so that I can ensure my account is secure when not in use. |
+| As a registered user | I would like to create bookings | so that I can reserve a table at the resturant for a desired date/timeslot. |
+| As a registered user | I would like to view an list of my upcoming bookings (ordered by most recent) | so that I can see all my upcoming bookings in one place. |
+| As a registered user | I would like my modify my existing bookings | so that I can adjust parts of my booking without having to create a new one if my plans change. |
+| As a registered user | I would like delete my existing bookings | so that I can cancel a booking if I can no longer attend. |
+| As a registered user | I would like to see the availibility of timeslots when booking | so that I know if the timeslot if free. |
+| As a guest user | I would like to register for an account | so that I can create and manage bookings. |
+| As a user | I would like to view the menu | so that I can see what the resturant has to offer. |
+| As a user | I would like to view a homepage | so that I can read about the resturant, and what it specialises in. |
+| As a user | I would like to see be able to contact the resturant | so that I can make bookings over the phone or by email. |
+| As a user | I would like the site to scale correctly to my device size | so that I can comfortably view/use the site on all of my devices. |
+| As a user | I would like to see links to the resturant's social media pages| so that I can follow them for news on any upcoming event, offers, menu changes, etc... |
 | As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. |
+| As a developer | I would like to see a README file | so that I can famliarise myself with all of the site's features, database schema, and any know issues/bugs before making contributions. |
+| As a developer | I would like to see a TESTING file | so that I can see a document of all tests that have been conducted on the sites features, so I know they work as intened. |
+| As a developer | I deploy the site to Heroku | so that I can test the features of the website through the develpment process, and test it on multiple browsers. |
 
 ## Wireframes
 
@@ -149,34 +146,37 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 
 ## Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-In this section, you should go over the different parts of your project, and describe each feature. You should explain what value each of the features provides for the user, focusing on your target audience, what they want to achieve, and how your project can help them achieve these things.
-
-**IMPORTANT**: Remember to always include a screenshot of each individual feature!
-
-⚠️ --- END --- ⚠️
-
 ### Existing Features
 
 | Feature | Notes | Screenshot |
 | --- | --- | --- |
-| Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register.png) |
-| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/login.png) |
+| Register | Authentication is handled by allauth, allowing users to register accounts. | ![screenshot](documentation/features/register-login.png) |
+| Login | Authentication is handled by allauth, allowing users to log in to their existing accounts. | ![screenshot](documentation/features/register-login.png) |
 | Logout | Authentication is handled by allauth, allowing users to log out of their accounts. | ![screenshot](documentation/features/logout.png) |
-| Blog List | The homepage displays basic information about blog posts, including image, title, author, date, and a brief excerpt. | ![screenshot](documentation/features/blog-list.png) |
-| View Post | Users can view the full blog post details, including any comments. | ![screenshot](documentation/features/view-post.png) |
-| Pagination | Blog posts are displayed in pages, with six posts per page. This provides better navigation for users through the post list. | ![screenshot](documentation/features/pagination.png) |
-| Add Comments | Authenticated visitors can comment on blog posts; comments require approval before being published. | ![screenshot](documentation/features/add-comment.png) |
-| Edit Comments | Authenticated visitors can edit their own comments. | ![screenshot](documentation/features/edit-comment.png) |
-| Delete Comments | Authenticated visitors can delete their own comments. | ![screenshot](documentation/features/delete-comment.png) |
-| Comment Approvals | Admins can approve or disapprove comments submitted by users before they are visible on the blog post. | ![screenshot](documentation/features/comment-approval.png) |
-| Create Post | Site owners can create/publish blog posts, including setting a featured image using Cloudinary, all from the Django admin dashboard. | ![screenshot](documentation/features/create-post.png) |
-| Update Post | Site owners can update/manage blog posts from the Django admin dashboard. | ![screenshot](documentation/features/update-post.png) |
-| Delete Post | Site owners can delete blog posts from the Django admin dashboard. | ![screenshot](documentation/features/delete-post.png) |
-| About Page | The About page displays the latest information about the site author, along with the option for visitors to send collaboration requests. | ![screenshot](documentation/features/about.png) |
-| Collaboration Requests | Visitors can submit collaboration requests from the *About* page, which are later reviewed by the admin. | ![screenshot](documentation/features/collaboration.png) |
-| User Feedback | Clear and obvious Django messages are used to provide feedback to user actions. | ![screenshot](documentation/features/messages.png) |
+| Create User (Admin) | Site Admins can create a user from the admin panel. | ![screenshot](documentation/features/create-user-admin.png) |
+| View User Info (Admin) | Site Admins can view a list of all users from the admin panel, as well as each individual user. | ![screenshot](documentation/features/view-user-admin.png) |
+| Edit User Info (Admin) | Site Admins can edit a user's information from the admin panel. | ![screenshot](documentation/features/edit-user-admin.png) |
+| Delete User (Admin) | Site Admins can delete a user from the admin panel. | ![screenshot](documentation/features/delete-user-admin.png) |
+| Homepage | The homepage displays basic information about the resturant, what it specialises in, and the names of it's founders. | ![screenshot](documentation/features/homepage.png) |
+| Create Booking | Authenticated users can create a booking for a specific date & timeslot. The can also specify number of gustes, any allergens, and add additional notes | ![screenshot](documentation/features/create-booking.png) |
+| View Bookings | Authenticated users can view a list of their existing booking, which are ordered by most recent date. Any bookings that exist in the past will not be shown on the list. | ![screenshot](documentation/features/view-booking.png) |
+| Edit Booking | Authenticated users can edit their existing bookings. | ![screenshot](documentation/features/edit-booking.png) |
+| Delete Booking | Authenticated users can delete their existing bookings. | ![screenshot](documentation/features/delete-booking.png) |
+| Create Booking (Admin) | Site Admins can create a booking from the admin panel. | ![screenshot](documentation/features/create-booking-admin.png) |
+| View Bookings (Admin) | Site Admins can view a list of all bookings from the admin panel, as well as each individual booking. | ![screenshot](documentation/features/view-booking-admin.png) |
+| Edit Booking (Admin) | Site Admins can edit a booking from the admin panel. | ![screenshot](documentation/features/edit-booking-admin.png) |
+| Delete Booking (Admin) | Site Admins can delete a booking from the admin panel. | ![screenshot](documentation/features/delete-booking-admin.png) |
+| View Menu | Users can view a collapsable list of menu items categorised by Starter, Burger, Side, Dessert, or Drink. | ![screenshot](documentation/features/menu.png) |
+| Create Menu Item | Site admins can create menu items, including setting a menu image using Cloudinary, all from the Django admin dashboard. | ![screenshot](documentation/features/create-menu-item.png) |
+| View Menu Items (Admin Panel) | Site admins view a list of menu items from the admin panel. | ![screenshot](documentation/features/view-menu-item.png) |
+| Update Menu Item | Site admins can update/manage menu items from the Django admin dashboard. | ![screenshot](documentation/features/edit-menu-item.png) |
+| Delete Menu Item | Site admins can delete menu items from the Django admin dashboard. | ![screenshot](documentation/features/delete-menu-item.png) |
+| Create Allergen | Site admins can create allergens from the admin panel. | ![screenshot](documentation/features/create-allergen.png) |
+| View Allergen | Site admins can view a list of all allergens from the admin panel, as well as viewing each individual allergen entry. | ![screenshot](documentation/features/view-allergen.png) |
+| Edit Allergen | Site admins can edit allergens from the admin panel. | ![screenshot](documentation/features/edit-delete-allergen.png) |
+| Delete Allergen | Site admins can delete allergens from the admin panel. | ![screenshot](documentation/features/edit-delete-allergen.png) |
+
+
 | Heroku Deployment | The site is fully deployed to Heroku, making it accessible online and easy to manage. | ![screenshot](documentation/features/heroku.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
