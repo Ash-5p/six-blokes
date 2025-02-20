@@ -161,6 +161,11 @@ th {
   margin: 20px auto;
 }
 
+.col.error-links {
+    max-width: 400px;
+    margin: auto;
+}
+
 .list-style-inside>li {
     margin-left: -20.8px;
   }
