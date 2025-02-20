@@ -147,6 +147,24 @@ th {
   box-shadow: #212529 2px 2px;
 }
 
+/*404 Page-----------------------------------------------*/
+
+.error-text {
+  font-family: "Abel", serif;
+  color: black;
+}
+
+.list-style-inside {
+  list-style: inside;
+  width: fit-content;
+  text-align: start;
+  margin: 20px auto;
+}
+
+.list-style-inside>li {
+    margin-left: -20.8px;
+  }
+
 /*Sign in/ Sign up-----------------------------------------------*/
 
 .signin-signup-form > p {
