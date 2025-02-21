@@ -175,37 +175,25 @@ I've used [Balsamiq](https://balsamiq.com/wireframes) to design my site wirefram
 | View Allergen | Site admins can view a list of all allergens from the admin panel, as well as viewing each individual allergen entry. | ![screenshot](documentation/features/view-allergen.png) |
 | Edit Allergen | Site admins can edit allergens from the admin panel. | ![screenshot](documentation/features/edit-delete-allergen.png) |
 | Delete Allergen | Site admins can delete allergens from the admin panel. | ![screenshot](documentation/features/edit-delete-allergen.png) |
-
-
+| Header | The site header features the Six Blokes logo and a navbar with links to each of the sites pages. | ![screenshot](documentation/features/header.png) |
+| Header (Mobile & Tablet) | The site header condenses the navbar down into a burger icon which will expand when clicked. | ![screenshot](documentation/features/header-mobile.png) |
+| Navbar (Mobile & Tablet) | The navbar is shown when the burger icon is clicked on smaller screens. | ![screenshot](documentation/features/navbar.png) |
+| Footer | The site footer features the resturant's phone number and email address, as well as clickable links to their social media accounts which open up in a new tab. | ![screenshot](documentation/features/footer.png) |
 | Heroku Deployment | The site is fully deployed to Heroku, making it accessible online and easy to manage. | ![screenshot](documentation/features/heroku.png) |
 | 404 | The 404 error page will indicate when a user has navigated to a page that doesn't exist, replacing the default Heroku 404 page with one that ties into the site's look and feel. | ![screenshot](documentation/features/404.png) |
 
 ### Future Features
 
-⚠️ INSTRUCTIONS ⚠️
-
-Do you have additional ideas that you'd like to include on your project in the future? Fantastic, list them here! It's always great to have plans for future improvements. Consider adding any helpful links or notes to help remind you in the future, if you revisit the project in a couple years.
-
-A few examples are listed below to align with possible ways to improve on the sample walkthrough project, to give you some inspiration.
-
-⚠️ --- END ---⚠️
-
-- **Post Categories/Tags**: Allow users to categorize and tag blog posts, making it easier for visitors to filter content based on their interests.
-- **Post Search Functionality**: Add a search bar for users to quickly find posts by keywords or phrases.
-- **Post Likes/Dislikes or Upvotes**: Implement a "like" or "upvote" system for blog posts to encourage user engagement and give feedback to the author.
-- **User Profiles**: Create personalized user profiles where authenticated users can view their comments, liked posts, and account information.
-- **Comment Replies & Threads**: Enable users to reply to comments, creating nested comment threads for better discussions.
-- **Post Sharing**: Add social media sharing buttons (e.g., Twitter, Facebook, LinkedIn) for users to share blog posts.
-- **Notifications**: Implement a notification system that alerts users when their comments are approved, when new comments are made on a post they've commented on, or when new posts are published.
-- **Email Subscriptions**: Allow users to subscribe to receive email notifications for new posts, updates, or newsletters.
-- **Post Analytics**: Provide post authors with analytics such as views, time spent reading, and engagement rates.
-- **Multilingual Support**: Add the ability to write and view blog posts in multiple languages, broadening the audience.
-- **Related Posts Recommendations**: Show related posts at the bottom of a blog post to encourage further reading and keep users engaged.
-- **Content Flagging/Reporting**: Allow users to flag or report inappropriate content (comments or posts) for moderation.
-- **SEO Optimization**: Implement features for SEO, such as meta tags, custom URLs, and keywords for better search engine ranking.
-- **User Dashboard**: Provide users with a dashboard to track their activity, such as comments made, likes received, and blog posts they’ve interacted with.
-- **Admin Dashboard Analytics**: Provide site admins with an analytics dashboard showing user activity, popular posts, most commented articles, etc.
-- **Custom Themes for Users**: Allow users to customize the visual theme of the site (colors, fonts, etc.) to suit their preferences.
+- **Prevent Overbooking**: Impliment logic to limit the number of guests that can be booked in for any given date/timeslot.
+- **Show Booking Availibility**: Once the feature to prevent overbooking has been implimented, impliment a feature which will show users the number of seats availible for each date/timeslot combination.
+- **Menu Sub-Categories**: Impliment secondary categories for each menu category to futher organise the menu. E.g Drinks - Milkshakes/Soft Drinks/ Alcoholoic Beverages.
+- **Google Maps API**: Add an interactive map with the location of the resturant using an API.
+- **Review System**: Implement a reviews page, so customers can leave feedback.
+- **Account Managment Page**: Impliment a page where logged in users can manage/update aspects of their account.
+- **Allergies info Linked to Account**: Allow users to select their own allergies when creating/modifying their account. This will enable these allergens to be preselected when creating a booking.
+- **Menu Allergen Filter**: Add a filter feature which allows users to filter out items with one or more selected allergens.
+- **Notifications**: Implement a notification system that alerts users when their bookings are approved.
+- **Email Subscriptions**: Allow users to subscribe to receive email notifications for new deals, updates, or newsletters.
 
 ## Tools & Technologies
 
@@ -215,10 +203,10 @@ A few examples are listed below to align with possible ways to improve on the sa
 | [![badge](https://img.shields.io/badge/Git-grey?logo=git&logoColor=F05032)](https://git-scm.com) | Version control. (`git add`, `git commit`, `git push`) |
 | [![badge](https://img.shields.io/badge/GitHub-grey?logo=github&logoColor=181717)](https://github.com) | Secure online code storage. |
 | [![badge](https://img.shields.io/badge/Gitpod-grey?logo=gitpod&logoColor=FFAE33)](https://gitpod.io) | Cloud-based IDE for development. |
+| [![badge](https://img.shields.io/badge/Visual%20Studio-grey?logo=visual-studio-codelogoColor=FFAE33)](https://visualstudio.microsoft.com) | IDE for development. |
 | [![badge](https://img.shields.io/badge/HTML-grey?logo=html5&logoColor=E34F26)](https://en.wikipedia.org/wiki/HTML) | Main site content and layout. |
 | [![badge](https://img.shields.io/badge/CSS-grey?logo=css3&logoColor=1572B6)](https://en.wikipedia.org/wiki/CSS) | Design and layout. |
 | [![badge](https://img.shields.io/badge/JavaScript-grey?logo=javascript&logoColor=F7DF1E)](https://www.javascript.com) | User interaction on the site. |
-| [![badge](https://img.shields.io/badge/jQuery-grey?logo=jquery&logoColor=0769AD)](https://jquery.com) | User interaction on the site. |
 | [![badge](https://img.shields.io/badge/Python-grey?logo=python&logoColor=3776AB)](https://www.python.org) | Back-end programming language. |
 | [![badge](https://img.shields.io/badge/Heroku-grey?logo=heroku&logoColor=430098)](https://www.heroku.com) | Hosting the deployed back-end site. |
 | [![badge](https://img.shields.io/badge/Bootstrap-grey?logo=bootstrap&logoColor=7952B3)](https://getbootstrap.com) | Front-end CSS framework for modern responsiveness and pre-built components. |
@@ -233,7 +221,6 @@ A few examples are listed below to align with possible ways to improve on the sa
 ⚠️ NOTE ⚠️
 
 Want to add more?
-
 - Tutorial: https://shields.io/badges/static-badge
 - Icons/Logos: https://simpleicons.org
   - FYI: not all logos are available to use
@@ -270,36 +257,38 @@ I have used `Mermaid` to generate an interactive ERD of my project.
 
 ```mermaid
 erDiagram
-    USER ||--o{ POST : "authors"
-    USER ||--o{ COMMENT : "commenters"
-    POST ||--o{ COMMENT : "has"
-    POST {
-        string title
-        string slug
-        cloudinary featured_image
-        text content
-        text excerpt
-        datetime created_on
-        datetime updated_on
-        int status
-    }
-    COMMENT {
-        text body
-        datetime created_on
-        bool approved
-    }
-    ABOUT {
-        string title
-        cloudinary profile_image
-        text content
-        datetime updated_on
-    }
-    COLLABORATEREQUEST {
+    MENUITEM {
+        int id PK
         string name
-        string email
-        text message
-        bool read
+        string category
+        string description
     }
+    ALLERGEN {
+        int id PK
+        string name
+    }
+    BOOKING {
+        int id PK
+        date date
+        int time_slot
+        int guests
+        string booking_notes
+    }
+    USER {
+        int id PK
+        string first_name
+        string email
+    }
+
+    %% Relationships
+    %% A MenuItem can have many Allergens and an Allergen can be associated with many MenuItems
+    MENUITEM }o--o{ ALLERGEN : has
+
+    %% A Booking can have many Allergens (allergies) and an Allergen can be related to many Bookings
+    BOOKING }o--o{ ALLERGEN : includes
+
+    %% A Booking is made by one User, but a User can have many Bookings
+    USER ||--o{ BOOKING : "makes"
 ```
 
 source: [Mermaid](https://mermaid.live/edit#pako:eNqNUstuwjAQ_BVrz6EiVIiSG21zg9LyuFSRkImXxGpsR45TkQb-vU4C5REq4Yut2dnZnfWWECqG4AHqV04jTUUgiT3LuT8ju12no0ryPp0viEcCoLmJlc4CaHNeppOJ_9bQQiUESoMnZq1wgxnTS0rZvKuTGc1lRAw3CbbQLMmjExgmKmdcUl2QDVKTa2QrLmh0lmdwa0iobFPSXKG4DVGnZyijBg0XSEJt1ayWkjeCecpaQS6N7dB2kDXYvrmOjsurymvFijvLrpVKCE1Trb6RXYiPnqfLOwZ3NiMrsuEJ3jeif_3-eRuPbQuz0cKf-R9L_-YnSiraf4iC8uSqvMAsu2iq9m3ncfQMDgjUNpPZla0LBWBitPJQ7ROj-qtaqIpnl1XNCxmCZ3SODjQGDksO3oYmmUVTKsErYQue-zR8cN2B2-t3h73BY2_Qd6AAr7t34Ecpm-HW7M_63UhqlUfxQWr_C_zI_7I)
