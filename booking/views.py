@@ -7,6 +7,21 @@ from .forms import BookingForm
 
 # Create your views here.
 def booking_view(request):
+    """
+    Renders the booking form and allows authenticated user to
+    created a booking
+    Display an individual instance of :model:`booking.Booking`.
+
+    **Context**
+
+    ``booking``
+        An instance of :model:`booking.Booking`.
+    ``booking_form``
+        An instance of :form:`booking.BookingForm`.
+    **Template:**
+
+    :template:`booking/booking.html`
+    """
     booking_form = BookingForm()
 
     if request.method == "POST":
@@ -31,7 +46,21 @@ def booking_view(request):
 
 
 def booking_list_view(request):
+    """
+    Renders all of the authenticated users bookings in a list
+    past bookings aren't shown
+    Display an individual instance of :model:`booking.Booking`.
 
+    **Context**
+
+    ``user_bookings``
+        All furture bookings created by the authenticated user.
+    ``booking_form``
+        An instance of :form:`booking.BookingForm`.
+    **Template:**
+
+    :template:`booking/booking_list.html`
+    """
     user_bookings = Booking.objects.filter(user=request.user).order_by("date").filter(user=request.user, date__gte=now().date())
 
     context = {

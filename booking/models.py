@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django.core.validators import MaxValueValidator, MinValueValidator #https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model/
+from django.core.validators import MaxValueValidator, MinValueValidator  #https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model/
 
 TIMES = (
     (12, '12:00 - 13:00'),
@@ -16,7 +16,11 @@ TIMES = (
     (22, '22:00 - 23:00'),
 )
 
+
 class Allergen(models.Model):
+    """
+    Stores a single allergen.
+    """
     name = models.CharField(max_length=100)
 
     class Meta:
@@ -52,5 +56,3 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"Booking for {self.name} on {self.date}"
-        
-    
