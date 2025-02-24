@@ -170,9 +170,19 @@ th {
   margin: auto;
 }
 
+.col.error-links h3{
+  font-size: 1.5em;
+}
+
+.col.error-links a {
+  color: darkblue;
+}
+
 .list-style-inside > li {
   margin-left: -20.8px;
 }
+
+
 
 /*Sign in/ Sign up-----------------------------------------------*/
 

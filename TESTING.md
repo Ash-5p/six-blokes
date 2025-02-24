@@ -261,13 +261,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop |
 | --- | --- | --- |
-| Register | ![screenshot](documentation/lighthouse/mobile-register.png) | ![screenshot](documentation/lighthouse/desktop-register.png) |
-| Login | ![screenshot](documentation/lighthouse/mobile-login.png) | ![screenshot](documentation/lighthouse/desktop-login.png) |
-| Home | ![screenshot](documentation/lighthouse/mobile-home.png) | ![screenshot](documentation/lighthouse/desktop-home.png) |
-| Add Blog | ![screenshot](documentation/lighthouse/mobile-add-blog.png) | ![screenshot](documentation/lighthouse/desktop-add-blog.png) |
-| Edit Blog | ![screenshot](documentation/lighthouse/mobile-edit-blog.png) | ![screenshot](documentation/lighthouse/desktop-edit-blog.png) |
-| Blog Post | ![screenshot](documentation/lighthouse/mobile-blog-post.png) | ![screenshot](documentation/lighthouse/desktop-blog-post.png) |
-| 404 | ![screenshot](documentation/lighthouse/mobile-404.png) | ![screenshot](documentation/lighthouse/desktop-404.png) |
+| Signin/Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signin-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-signin-signup.png) |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home.png) |
+| Menu | ![screenshot](documentation/lighthouse/lighthouse-mobile-menu.png) | ![screenshot](documentation/lighthouse/lighthouse-menu.png) |
+| Book a Table | ![screenshot](documentation/lighthouse/lighthouse-mobile-book.png) | ![screenshot](documentation/lighthouse/lighthouse-book.png) |
+| My Bookings | ![screenshot](documentation/lighthouse/lighthouse-mobile-bookings.png) | ![screenshot](documentation/lighthouse/lighthouse-bookings.png) |
+| 404 | ![screenshot](documentation/lighthouse/lighthouse-mobile-404.png) | ![screenshot](documentation/lighthouse/lighthouse-404.png) |
 
 ## Defensive Programming
 
