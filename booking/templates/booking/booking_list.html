@@ -28,12 +28,12 @@
             </ul>
           </td>
           <td>
-            <button class="edit-btn" data-booking_id="{{ booking.id }}">
+            <button class="edit-btn" aria-label="edit" data-booking_id="{{ booking.id }}">
               <i class="fa-solid fa-pencil"></i>
             </button>
           </td>
           <td>
-            <button class="delete-btn" data-booking_id="{{ booking.id }}">
+            <button class="delete-btn"aria-label="delete"  data-booking_id="{{ booking.id }}">
               <i class="fa-solid fa-trash-can"></i>
             </button>
           </td>
@@ -73,10 +73,10 @@
           {% csrf_token %} 
           {{ booking_form }}
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            <button type="button" class="btn btn-secondary" aria-label="close" data-bs-dismiss="modal">
               Close
             </button>
-            <button type="submit" class="btn btn-primary">Save Changes</button>
+            <button type="submit" aria-label="save changes" class="btn btn-primary">Save Changes</button>
           </div>
         </form>
       </div>
@@ -108,10 +108,10 @@
         undone.
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+        <button type="button" aria-label="close" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
+        <a id="deleteConfirm" aria-label="confirm" href="#" class="btn btn-danger">Delete</a>
       </div>
     </div>
   </div>
