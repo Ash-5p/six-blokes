@@ -183,90 +183,42 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 ## Responsiveness
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various device sizes.
-
-The minimum requirement is to test the following 3 sizes:
-
-- Mobile
-- Tablet
-- Desktop
-
-**IMPORTANT**: You must provide screenshots of your results, to "prove" that you've actually tested them.
-
-Using the [amiresponsive](http://ami.responsivedesign.is) mockup images (*or similar*) does not meet the requirements. Consider using some of the built-in device sizes from the Developer Tools.
-
-If you have tested the project on your actual mobile phone or tablet, consider also including screenshots of these as well. It showcases a higher level of manual tests, and can be seen as a positive inclusion!
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project to check for responsiveness issues.
 
-| Page | Mobile | Tablet | Desktop | Notes |
-| --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/responsiveness/mobile-register.png) | ![screenshot](documentation/responsiveness/tablet-register.png) | ![screenshot](documentation/responsiveness/desktop-register.png) | Works as expected |
-| Login | ![screenshot](documentation/responsiveness/mobile-login.png) | ![screenshot](documentation/responsiveness/tablet-login.png) | ![screenshot](documentation/responsiveness/desktop-login.png) | Works as expected |
-| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/responsiveness/mobile-add-blog.png) | ![screenshot](documentation/responsiveness/tablet-add-blog.png) | ![screenshot](documentation/responsiveness/desktop-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/responsiveness/mobile-edit-blog.png) | ![screenshot](documentation/responsiveness/tablet-edit-blog.png) | ![screenshot](documentation/responsiveness/desktop-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/responsiveness/mobile-blog-post.png) | ![screenshot](documentation/responsiveness/tablet-blog-post.png) | ![screenshot](documentation/responsiveness/desktop-blog-post.png) | Works as expected |
-| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | Works as expected |
+| Page | Mobile | Tablet | Desktop | Pixel 7 Pro | Notes |
+| --- | --- | --- | --- | --- | --- |
+| Signin/Signup | ![screenshot](documentation/responsiveness/mobile-signin-signup.png) | ![screenshot](documentation/responsiveness/tablet-signin-signup.png) | ![screenshot](documentation/responsiveness/desktop-signin-signup.png) | ![screenshot](documentation/responsiveness/pixel-signin-signup.png) | Works as expected |
+| Home | ![screenshot](documentation/responsiveness/mobile-home.png) | ![screenshot](documentation/responsiveness/tablet-home.png) | ![screenshot](documentation/responsiveness/desktop-home.png) | ![screenshot](documentation/responsiveness/pixel-home.png) | Works as expected |
+| Menu | ![screenshot](documentation/responsiveness/mobile-menu.png) | ![screenshot](documentation/responsiveness/tablet-menu.png) | ![screenshot](documentation/responsiveness/desktop-menu.png) | ![screenshot](documentation/responsiveness/pixel-menu.png) | Works as expected |
+| Book a Table | ![screenshot](documentation/responsiveness/mobile-book.png) | ![screenshot](documentation/responsiveness/tablet-book.png) | ![screenshot](documentation/responsiveness/desktop-book.png) | ![screenshot](documentation/responsiveness/pixel-book.png) | Works as expected |
+| My Bookings | ![screenshot](documentation/responsiveness/mobile-bookings.png) | ![screenshot](documentation/responsiveness/tablet-bookings.png) | ![screenshot](documentation/responsiveness/desktop-bookings.png) | ![screenshot](documentation/responsiveness/pixel-bookings.png) | Works as expected |
+| 404 | ![screenshot](documentation/responsiveness/mobile-404.png) | ![screenshot](documentation/responsiveness/tablet-404.png) | ![screenshot](documentation/responsiveness/desktop-404.png) | ![screenshot](documentation/responsiveness/pixel-404.png) | Works as expected |
 
 ## Browser Compatibility
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site on various browsers. Consider testing at least 3 different browsers, if available on your system. You DO NOT need to use all of the browsers below, just pick any 3 (minimum).
-
-Recommended browsers to consider:
-- [Chrome](https://www.google.com/chrome)
-- [Firefox (Developer Edition)](https://www.mozilla.org/firefox/developer)
-- [Edge](https://www.microsoft.com/edge)
-- [Safari](https://support.apple.com/downloads/safari)
-- [Brave](https://brave.com/download)
-- [Opera](https://www.opera.com/download)
-
-**IMPORTANT**: You must provide screenshots of the browsers you've tested, to "prove" that you've actually tested them.
-
-Please note, there are services out there that can test multiple browser compatibilities at the same time. Some of these are paid services, but some are free. If you use these, you must provide a link to the source used for attribution, and multiple screenshots of the results.
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 
-| Page | Chrome | Firefox | Safari | Notes |
+| Page | Chrome | Opera | Edge | Notes |
 | --- | --- | --- | --- | --- |
-| Register | ![screenshot](documentation/browsers/chrome-register.png) | ![screenshot](documentation/browsers/firefox-register.png) | ![screenshot](documentation/browsers/safari-register.png) | Works as expected |
-| Login | ![screenshot](documentation/browsers/chrome-login.png) | ![screenshot](documentation/browsers/firefox-login.png) | ![screenshot](documentation/browsers/safari-login.png) | Works as expected |
-| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/firefox-home.png) | ![screenshot](documentation/browsers/safari-home.png) | Works as expected |
-| Add Blog | ![screenshot](documentation/browsers/chrome-add-blog.png) | ![screenshot](documentation/browsers/firefox-add-blog.png) | ![screenshot](documentation/browsers/safari-add-blog.png) | Works as expected |
-| Edit Blog | ![screenshot](documentation/browsers/chrome-edit-blog.png) | ![screenshot](documentation/browsers/firefox-edit-blog.png) | ![screenshot](documentation/browsers/safari-edit-blog.png) | Works as expected |
-| Blog Post | ![screenshot](documentation/browsers/chrome-blog-post.png) | ![screenshot](documentation/browsers/firefox-blog-post.png) | ![screenshot](documentation/browsers/safari-blog-post.png) | Works as expected |
-| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/firefox-404.png) | ![screenshot](documentation/browsers/safari-404.png) | Works as expected |
+| Signin/Signup | ![screenshot](documentation/browsers/chrome-signin-signup.png) | ![screenshot](documentation/browsers/opera-signin-signup.png) | ![screenshot](documentation/browsers/edge-signin-signup.png) | Works as expected |
+| Home | ![screenshot](documentation/browsers/chrome-home.png) | ![screenshot](documentation/browsers/opera-home.png) | ![screenshot](documentation/browsers/edge-home.png) | Works as expected |
+| Menu | ![screenshot](documentation/browsers/chrome-menu.png) | ![screenshot](documentation/browsers/opera-menu.png) | ![screenshot](documentation/browsers/edge-menu.png) | Works as expected |
+| Book a Table | ![screenshot](documentation/browsers/chrome-book.png) | ![screenshot](documentation/browsers/opera-book.png) | ![screenshot](documentation/browsers/edge-book.png) | Works as expected |
+| My Bookings | ![screenshot](documentation/browsers/chrome-bookings.png) | ![screenshot](documentation/browsers/opera-bookings.png) | ![screenshot](documentation/browsers/edge-bookings.png) | Works as expected |
+| 404 | ![screenshot](documentation/browsers/chrome-404.png) | ![screenshot](documentation/browsers/opera-404.png) | ![screenshot](documentation/browsers/edge-404.png) | Works as expected |
 
 ## Lighthouse Audit
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use this space to discuss testing the live/deployed site's Lighthouse Audit reports. Avoid testing the local version (Gitpod/VSCode/etc.), as this can have knock-on effects for performance. If you don't have "Lighthouse" in your Developer Tools, it can be added as an [extension](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk).
-
-Unless your project is a single-page application (SPA), you should test Lighthouse Audit results for all of your pages, for both *mobile* and *desktop*.
-
-**IMPORTANT**: You must provide screenshots of the results, to "prove" that you've actually tested them.
-
-⚠️ --- END --- ⚠️
-
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues. Some warnings are outside of my control, and mobile results tend to be lower than desktop.
 
-| Page | Mobile | Desktop |
-| --- | --- | --- |
-| Signin/Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signin-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-signin-signup.png) |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home.png) |
-| Menu | ![screenshot](documentation/lighthouse/lighthouse-mobile-menu.png) | ![screenshot](documentation/lighthouse/lighthouse-menu.png) |
-| Book a Table | ![screenshot](documentation/lighthouse/lighthouse-mobile-book.png) | ![screenshot](documentation/lighthouse/lighthouse-book.png) |
-| My Bookings | ![screenshot](documentation/lighthouse/lighthouse-mobile-bookings.png) | ![screenshot](documentation/lighthouse/lighthouse-bookings.png) |
-| 404 | ![screenshot](documentation/lighthouse/lighthouse-mobile-404.png) | ![screenshot](documentation/lighthouse/lighthouse-404.png) |
+| Page | Mobile | Desktop | Notes |
+| --- | --- | --- | --- |
+| Signin/Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signin-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-signin-signup.png) | Some performance issues on mobile, and minor best practices issue caused by bootstrap modals |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home.png) | Some performance issues, and minor best practices issue caused by bootstrap modals |
+| Menu | ![screenshot](documentation/lighthouse/lighthouse-mobile-menu.png) | ![screenshot](documentation/lighthouse/lighthouse-menu.png) | Some performance issues, and best practices issue caused by bootstrap modals & Cloudinary images not using HTTPS |
+| Book a Table | ![screenshot](documentation/lighthouse/lighthouse-mobile-book.png) | ![screenshot](documentation/lighthouse/lighthouse-book.png) | Some performance issues on mobile, and minor best practices issue caused by bootstrap modals |
+| My Bookings | ![screenshot](documentation/lighthouse/lighthouse-mobile-bookings.png) | ![screenshot](documentation/lighthouse/lighthouse-bookings.png) | Some performance issues|
+| 404 | ![screenshot](documentation/lighthouse/lighthouse-mobile-404.png) | ![screenshot](documentation/lighthouse/lighthouse-404.png) | Some minor performance issues, minor best practices issue caused by bootstrap modals, and SEO issue cuased by the error 404 code |
 
 ## Defensive Programming
 
