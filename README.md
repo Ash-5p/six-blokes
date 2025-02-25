@@ -527,6 +527,7 @@ Use this space to provide attribution links for any borrowed code snippets, elem
 | [Cloudinary API](https://cloudinary.com) | Cloud storage for static/media files |
 | [Whitenoise](https://whitenoise.readthedocs.io) | Static file service |
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
+| [WebAIM](https://webaim.org/resources/contrastchecker) | Check colour contrast for accessiblity |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 
 ### Media
@@ -540,7 +541,9 @@ Use this space to provide attribution links for any borrowed code snippets, elem
 | [CloudConvert](https://cloudconvert.com/webp-converter) | Converting images to `.webp` |
 | [GIMP](https://www.gimp.org/) | Editing image files |
 | [Wikimedia](https://upload.wikimedia.org/wikipedia/commons/4/48/BLANK_ICON.png) | Placeholder image for menu |
-| [removebg](https://www.remove.bg/) | Removing background from images |
+| [removebg](https://www.remove.bg) | Removing background from images |
+| [Image Resizer](https://imageresizer.com/) | Resize images for README file |
+
 
 ### Acknowledgements
 

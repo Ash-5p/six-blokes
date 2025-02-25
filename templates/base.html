@@ -9,47 +9,26 @@
 <html class="h-100" lang="en">
   <head>
     <title>Six Blokes</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta
-      name="description"
-      content="Six Blokes, Burgers, Food, Drink, Resturant, Five Guys, UK, Jerry, Terry, Harry, Barry, Garry, Larry"
-    />
-    <meta
-      name="keywords"
-      content="six blokes, burger, burgers, food, drink, resturant, five guys, uk, jerry, terry, harry, barry, garry, larry"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Six Blokes, Burgers, Food, Drink, Resturant, Five Guys, UK, Jerry, Terry, Harry, Barry, Garry, Larry">
+    <meta name="keywords" content="six blokes, burger, burgers, food, drink, resturant, five guys, uk, jerry, terry, harry, barry, garry, larry">
 
     <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/png"
-      href="{% static 'favicon.ico' %}"
-    />
-    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}">
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
 
     <!-- Google Fonts CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Abel&family=Irish+Grover&family=Just+Another+Hand&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Irish+Grover&family=Just+Another+Hand&display=swap" rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
   </head>
 
   <body class="d-flex flex-column h-100 main-bg">
@@ -61,56 +40,36 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == home_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'home' %}"
-                  >Home</a
-                >
+                <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page" href="{% url 'home' %}">
+                  Home
+                </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == menu_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'menu' %}"
-                  >Menu</a
-                >
+                <a class="nav-link {% if request.path == menu_url %}active{% endif %}" aria-current="page" href="{% url 'menu' %}">
+                  Menu
+                </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == booking_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'booking' %}"
-                  >Book a Table</a
-                >
+                <a class="nav-link {% if request.path == booking_url %}active{% endif %}" aria-current="page" href="{% url 'booking' %}">
+                  Book a Table
+                </a>
               </li>
               {% if user.is_authenticated %}
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == booking_list_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'booking_list' %}"
-                  >My Bookings</a
-                >
+                <a class="nav-link {% if request.path == booking_list_url %}active{% endif %}" aria-current="page" href="{% url 'booking_list' %}">
+                  My Bookings
+                </a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link"
-                  href="#"
-                  data-bs-toggle="modal"
-                  data-bs-target="#logoutModal"
-                >
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
                   Logout
                 </a>
               </li>
               {% else %}
               <li class="nav-item">
-                <a
-                  class="nav-link {% if request.path == signin_signup_url %}active{% endif %}"
-                  aria-current="page"
-                  href="{% url 'signin_signup' %}"
-                  >Sign-in / Sign-up</a
-                >
+                <a class="nav-link {% if request.path == signin_signup_url %}active{% endif %}" aria-current="page" href="{% url 'signin_signup' %}">
+                  Sign-in / Sign-up
+                </a>
               </li>
               {% endif %}
             </ul>
@@ -125,18 +84,10 @@
           </div>
 
           <!-- Right Section: Toggler Button -->
-          <button
-            class="navbar-toggler burger-icon"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarText"
-            aria-controls="navbarText"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"
-              ><i class="fa-solid fa-burger"></i
-            ></span>
+          <button class="navbar-toggler burger-icon" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+              <i class="fa-solid fa-burger"></i>
+            </span>
           </button>
         </div>
       </nav>

@@ -50,8 +50,12 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
+| templates | [index.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/index.html) | Link (if applicable) | ![screenshot](documentation/validation/html-templates-home.png) | Notes (if applicable) |
 | booking | [booking.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking.html) | Link (if applicable) | ![screenshot](documentation/validation/html-booking-booking.png) | Notes (if applicable) |
+| booking | [booking_list.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking_list.html) | Link (if applicable) | ![screenshot](documentation/validation/html-booking-booking-list.png) | Notes (if applicable) |
+| menu | [menu.html](https://github.com/Ash-5p/six-blokes/blob/main/menu/templates/menu/menu.html) | Link (if applicable) | ![screenshot](documentation/validation/html-menu-menu.png) | Notes (if applicable) |
 | users | [signin_signup.html](https://github.com/Ash-5p/six-blokes/blob/main/users/templates/users/signin_signup.html) | Link (if applicable) | ![screenshot](documentation/validation/html-users-signin_signup.png) | Notes (if applicable) |
+| templates | [index.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/404.html) | Link (if applicable) | ![screenshot](documentation/validation/html-templates-404.png) | Notes (if applicable) |
 
 
 ### CSS
