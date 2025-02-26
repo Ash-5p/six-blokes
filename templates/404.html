@@ -1,32 +1,40 @@
 {% extends "base.html" %} 
 {% block content %}
 <div class="container text-center">
-<h2>404: Lost in the Burgerverse!</h2>
+  <h2>404: Lost in the Burgerverse!</h2>
   <div class="row error-text">
     <div class="col">
       <p>
-        Uh-oh! Looks like you've wandered off the menu and into the realm of missing burgers. At Six Blokes, we’re all about serving up juicy patties and extra toppings—but unfortunately, we can’t serve up this page.<br><br>
-        Maybe our founders—Jerry, Terry, Harry, Barry, Garry, and Larry—got distracted flipping burgers and misplaced this link. Or perhaps a runaway fry cart whisked it away!
+        Uh-oh! Looks like you've wandered off the menu and into the realm of
+        missing burgers. At Six Blokes, we’re all about serving up juicy patties
+        and extra toppings—but unfortunately, we can’t serve up this page.<br /><br />
+        Maybe our founders—Jerry, Terry, Harry, Barry, Garry, and Larry—got
+        distracted flipping burgers and misplaced this link. Or perhaps a
+        runaway fry cart whisked it away!
+      </p>
     </div>
   </div>
   <div class="row error-text">
     <div class="col error-links">
-        <h3 class="text-start"><strong>Don't worry!</strong></h3>
+      <h3 class="text-start"><strong>Don't worry!</strong></h3>
       <ul class="list-style-inside">
-        <li>Hit the <a href="{% url 'home' %}">Home</a> button to get back to our delicious lineup.</li>
-        <li>Or check out our <a href="{% url 'menu' %}">Menu</a> for something mouthwatering.</li>
-    </ul>
+        <li>
+          Hit the <a href="{% url 'home' %}">Home</a> button to get back to our
+          delicious lineup.
+        </li>
+        <li>
+          Or check out our <a href="{% url 'menu' %}">Menu</a> for something
+          mouthwatering.
+        </li>
+      </ul>
     </div>
   </div>
-    <div class="row error-text">
-      <div class="col">
-        <p>
-            Remember, at Six Blokes, even our 404 errors are well-done!
-        </p>
-        <hr>
-        <p><em>Because when life gives you 404s, just add extra cheese.</em></p>
-      </div>
+  <div class="row error-text">
+    <div class="col">
+      <p>Remember, at Six Blokes, even our 404 errors are well-done!</p>
+      <hr />
+      <p><em>Because when life gives you 404s, just add extra cheese.</em></p>
     </div>
-    {% endblock %}
   </div>
 </div>
+{% endblock %}
