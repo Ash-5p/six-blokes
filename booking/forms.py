@@ -6,7 +6,7 @@ from .models import Booking, Allergen
 class BookingForm(forms.ModelForm):
     allergies = forms.ModelMultipleChoiceField(
         queryset=Allergen.objects.all(),
-        widget=forms.CheckboxSelectMultiple(attrs={"class": "list-unstyled"}),
+        widget=forms.CheckboxSelectMultiple(),
         required=False,
     )
     class Meta:

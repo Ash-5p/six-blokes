@@ -50,11 +50,11 @@ Unfortunately, pages that require a user to be "logged-in" and authenticated (CR
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 | home | [index.html](https://github.com/Ash-5p/six-blokes/blob/main/home/templates/home/index.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2F) | ![screenshot](documentation/validation/html-home-index.png) | |
-| booking | [booking.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fbooking%2Fbooking%2F) | ![screenshot](documentation/validation/html-booking-booking.png) | Notes (if applicable) |
-| booking | [booking_list.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking_list.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fbooking%2Fbooking_list%2F) | ![screenshot](documentation/validation/html-booking-booking_list.png) | Notes (if applicable) |
+| booking | [booking.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fbooking%2Fbooking%2F) | ![screenshot](documentation/validation/html-booking-booking.png) | |
+| booking | [booking_list.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking_list.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fbooking%2Fbooking_list%2F) | ![screenshot](documentation/validation/html-booking-booking_list.png) | |
 | menu | [menu.html](https://github.com/Ash-5p/six-blokes/blob/main/menu/templates/menu/menu.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fmenu%2Fmenu%2F) | ![screenshot](documentation/validation/html-menu-menu.png) | |
-| users | [signin_signup.html](https://github.com/Ash-5p/six-blokes/blob/main/users/templates/users/signin_signup.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fusers%2F) | ![screenshot](documentation/validation/html-users-signin_signup.png) | Notes (if applicable) |
-| templates | [404.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/404.html) | [W3 Validator]() | ![screenshot](documentation/validation/html-templates-404.png) | Notes (if applicable) |
+| users | [signin_signup.html](https://github.com/Ash-5p/six-blokes/blob/main/users/templates/users/signin_signup.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fusers%2F) | ![screenshot](documentation/validation/html-users-signin_signup.png) | |
+| templates | [404.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/404.html) | | ![screenshot](documentation/validation/html-templates-404.png) | Cannot provide w3 Validator link. Had to test via direct input due to 404 error |
 
 
 ### CSS
