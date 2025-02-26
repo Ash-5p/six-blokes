@@ -11,7 +11,7 @@
       <h3>{% trans "Sign In" %}</h3>
       <form method="POST" action="{% url 'signin_signup' %}" id="signin-form" class="signin-signup-form">
         {% csrf_token %}
-        {{ login_form.as_p }}
+        {{ login_form.as_div }}
         <input type="hidden" name="form_type" value="login">
         <button class="btn btn-signup btn-primary right" type="submit">{% trans "Sign In" %}</button>
       </form>
@@ -24,7 +24,7 @@
       <h3>{% trans "Sign Up" %}</h3>
       <form method="POST" action="{% url 'signin_signup' %}" id="signup-form" class="signin-signup-form">
         {% csrf_token %}
-        {{ signup_form.as_p }}
+        {{ signup_form.as_div }}
         <input type="hidden" name="form_type" value="signup">
         <button class="btn btn-signup btn-primary right" type="submit">{% trans "Create Account" %}</button>
       </form>

@@ -186,48 +186,50 @@ th {
 
 /*Sign in/ Sign up-----------------------------------------------*/
 
-.signin-signup-form > p {
+.signin-signup-form > div {
   display: flex;
+  flex-direction: column;
   justify-content: flex-end;
   width: 82%;
   margin: 10px auto;
-  max-width: 182px;
+  max-width: 250px;
 }
 
-.signin-signup-form > p > label {
+.signin-signup-form > div > label {
   align-self: center;
   flex-basis: 50%;
 }
 
-.signin-signup-form > p > input {
+.signin-signup-form > div > input {
   max-height: 29.2px;
   flex-basis: 66%;
 }
 
+#id_password1_helptext,
 #signup-form > ul,
-#signup-form > ul + p,
+#signup-form > ul + div,
 :has(+ #id_remember),
 #id_remember {
   display: none;
 }
 
 .signin-signup-form .errorlist {
-  width: 100%;
-  margin: auto;
+  width: fit-content;
+  margin: 10px auto;
   list-style: none;
   color: #bd0000;
   background-color: #f9fafc;
   border: solid 2px #bd0000;
   border-radius: 5px;
-  order: -1;
 }
 
 .signin-signup-form .errorlist li {
   margin-left: -32px;
+  padding: 2px 5px;
 }
 
 #signup-form > .errorlist,
-#signup-form > .errorlist + p {
+#signup-form > .errorlist + div {
   display: flex;
   justify-content: center;
 }
@@ -514,7 +516,8 @@ footer a {
     flex-wrap: wrap;
     max-width: 470px;
     margin: auto;
-  }
+    flex-direction: column;
+}
 
   .btn-signin,
   .btn-signup {

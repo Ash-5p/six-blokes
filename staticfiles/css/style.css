@@ -186,7 +186,7 @@ th {
 
 /*Sign in/ Sign up-----------------------------------------------*/
 
-.signin-signup-form > p {
+.signin-signup-form > div {
   display: flex;
   justify-content: flex-end;
   width: 82%;
@@ -194,18 +194,18 @@ th {
   max-width: 182px;
 }
 
-.signin-signup-form > p > label {
+.signin-signup-form > div > label {
   align-self: center;
   flex-basis: 50%;
 }
 
-.signin-signup-form > p > input {
+.signin-signup-form > div > input {
   max-height: 29.2px;
   flex-basis: 66%;
 }
 
 #signup-form > ul,
-#signup-form > ul + p,
+#signup-form > ul + div,
 :has(+ #id_remember),
 #id_remember {
   display: none;
@@ -227,7 +227,7 @@ th {
 }
 
 #signup-form > .errorlist,
-#signup-form > .errorlist + p {
+#signup-form > .errorlist + div {
   display: flex;
   justify-content: center;
 }
