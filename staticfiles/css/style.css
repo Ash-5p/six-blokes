@@ -421,8 +421,9 @@ input[id^="id_allergies_"],
   width: 100%;
 }
 
-.menu-collapse > h3 {
+.menu-collapse > p {
   margin-bottom: 0;
+  font-size: 1.5em;
 }
 
 .collapse > .card-body {
