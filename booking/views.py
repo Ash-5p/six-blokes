@@ -1,9 +1,11 @@
 from django.shortcuts import render, get_object_or_404, reverse, redirect
 from django.utils.timezone import now
+from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.http import HttpResponseRedirect, JsonResponse
 from .models import Booking
 from .forms import BookingForm
+
 
 # Create your views here.
 def booking_view(request):
@@ -45,6 +47,7 @@ def booking_view(request):
     )
 
 
+@login_required
 def booking_list_view(request):
     """
     Renders all of the authenticated users bookings in a list
@@ -75,7 +78,7 @@ def booking_list_view(request):
 
     )
 
-
+@login_required
 def booking_edit(request, booking_id):
     """
     Edit an individual booking.
@@ -106,7 +109,7 @@ def booking_edit(request, booking_id):
         "booking_notes": booking.booking_notes
     })
 
-
+@login_required
 def booking_delete(request, booking_id):
     """
     Delete an individual booking.

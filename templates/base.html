@@ -131,11 +131,7 @@
           </div>
           <div class="modal-body">Are you sure you want to log out?</div>
           <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
               Cancel
             </button>
             <button type="button" id="confirmLogout" class="btn btn-danger">
@@ -192,8 +188,8 @@
       src="https://kit.fontawesome.com/84138e39d8.js"
       crossorigin="anonymous"
     ></script>
-    <script src="{% static 'js/bookings.js' %}"></script>
-    <script src="{% static 'js/menu.js' %}"></script>
     <script src="{% static 'js/logout.js' %}"></script>
+    {% block js %}
+    {% endblock %}
   </body>
 </html>
