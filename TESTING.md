@@ -217,12 +217,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page | Mobile | Desktop | Notes |
 | --- | --- | --- | --- |
-| Signin/Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signin-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-signin-signup.png) | Some performance issues on mobile, and minor best practices issue caused by bootstrap modals |
-| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home.png) | Some performance issues, and minor best practices issue caused by bootstrap modals |
-| Menu | ![screenshot](documentation/lighthouse/lighthouse-mobile-menu.png) | ![screenshot](documentation/lighthouse/lighthouse-menu.png) | Some performance issues, and best practices issue caused by bootstrap modals & Cloudinary images not using HTTPS |
-| Book a Table | ![screenshot](documentation/lighthouse/lighthouse-mobile-book.png) | ![screenshot](documentation/lighthouse/lighthouse-book.png) | Some performance issues on mobile, and minor best practices issue caused by bootstrap modals |
+| Signin/Signup | ![screenshot](documentation/lighthouse/lighthouse-mobile-signin-signup.png) | ![screenshot](documentation/lighthouse/lighthouse-signin-signup.png) | Some performance issues on mobile |
+| Home | ![screenshot](documentation/lighthouse/lighthouse-mobile-home.png) | ![screenshot](documentation/lighthouse/lighthouse-home.png) | Some performance issues |
+| Menu | ![screenshot](documentation/lighthouse/lighthouse-mobile-menu.png) | ![screenshot](documentation/lighthouse/lighthouse-menu.png) | Some performance issues, and best practices issue caused Cloudinary images not using HTTPS |
+| Book a Table | ![screenshot](documentation/lighthouse/lighthouse-mobile-book.png) | ![screenshot](documentation/lighthouse/lighthouse-book.png) | Some performance issues on mobile |
 | My Bookings | ![screenshot](documentation/lighthouse/lighthouse-mobile-bookings.png) | ![screenshot](documentation/lighthouse/lighthouse-bookings.png) | Some performance issues|
-| 404 | ![screenshot](documentation/lighthouse/lighthouse-mobile-404.png) | ![screenshot](documentation/lighthouse/lighthouse-404.png) | Some minor performance issues, minor best practices issue caused by bootstrap modals, and SEO issue cuased by the error 404 code |
+| 404 | ![screenshot](documentation/lighthouse/lighthouse-mobile-404.png) | ![screenshot](documentation/lighthouse/lighthouse-404.png) | Some minor performance issues, minor best practices & SEO issue caused by the error 404 status |
 
 ## Defensive Programming
 
