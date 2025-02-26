@@ -421,7 +421,7 @@ input[id^="id_allergies_"],
   width: 100%;
 }
 
-.menu-collapse > p {
+.menu-collapse > span {
   margin-bottom: 0;
   font-size: 1.5em;
 }
