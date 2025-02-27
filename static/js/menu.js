@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".menu-collapse").forEach(button => {
         let menuCaret = button.querySelector("i.fa-solid");

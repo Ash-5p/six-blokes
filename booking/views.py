@@ -32,7 +32,9 @@ def booking_view(request):
             booking = booking_form.save(commit=False)
             booking.user = request.user
             booking_form.save()
-            messages.success(request, "Booking Successful! We look forward to seeing you!")
+            messages.success(
+                request, "Booking Successful! We look forward to seeing you!"
+                )
             return redirect(booking_list_view)
         else:
             messages.error(request, "Booking failed, Please try again")
@@ -40,7 +42,7 @@ def booking_view(request):
     return render(
         request,
         "booking/booking.html",
-        {   
+        {
             "booking": Booking,
             "booking_form": booking_form
         },
@@ -64,7 +66,13 @@ def booking_list_view(request):
 
     :template:`booking/booking_list.html`
     """
-    user_bookings = Booking.objects.filter(user=request.user).order_by("date").filter(user=request.user, date__gte=now().date())
+    user_bookings = Booking.objects.filter(
+        user=request.user
+        ).order_by(
+            "date"
+            ).filter(
+                user=request.user, date__gte=now().date()
+                )
 
     context = {
         'user_bookings': user_bookings,
@@ -77,6 +85,7 @@ def booking_list_view(request):
         context
 
     )
+
 
 @login_required
 def booking_edit(request, booking_id):
@@ -100,7 +109,8 @@ def booking_edit(request, booking_id):
             messages.error(request, "Error updating booking!")
         return HttpResponseRedirect(reverse("booking_list"))
 
-    # If GET request, return JSON response with booking data (Suggested by ChatGPT)
+    # If GET request, return JSON response with booking data
+    # (Suggested by ChatGPT)
     return JsonResponse({
         "date": booking.date.strftime("%Y-%m-%d"),
         "time_slot": booking.time_slot,
@@ -108,6 +118,7 @@ def booking_edit(request, booking_id):
         "allergies": list(booking.allergies.values_list("id", flat=True)),
         "booking_notes": booking.booking_notes
     })
+
 
 @login_required
 def booking_delete(request, booking_id):
@@ -118,10 +129,10 @@ def booking_delete(request, booking_id):
 
     ``booking``
         A single booking.
-    """    
+    """
     booking = get_object_or_404(Booking, pk=booking_id)
 
     booking.delete()
     messages.add_message(request, messages.SUCCESS, 'Booking deleted!')
-  
+
     return HttpResponseRedirect(reverse('booking_list'))

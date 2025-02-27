@@ -2,7 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import Booking, Allergen
 
-# Register your models here.
+
 @admin.register(Booking)
 class BookingAdmin(SummernoteModelAdmin):
 
@@ -11,6 +11,7 @@ class BookingAdmin(SummernoteModelAdmin):
     list_filter = ('date', 'time_slot',)
     summernote_fields = ('booking_notes')
     filter_horizontal = ('allergies',)
+
 
 @admin.register(Allergen)
 class AllergenAdmin(SummernoteModelAdmin):

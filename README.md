@@ -529,6 +529,8 @@ Use this space to provide attribution links for any borrowed code snippets, elem
 | [Python Tutor](https://pythontutor.com) | Additional Python help |
 | [WebAIM](https://webaim.org/resources/contrastchecker) | Check colour contrast for accessiblity |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
+| [GeeksforGeeks](https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model) | [booking/models.py]() |
+
 
 ### Media
 

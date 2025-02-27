@@ -1,3 +1,5 @@
+/* jshint esversion: 11 */
+
 document.addEventListener("DOMContentLoaded", function () {
     const logoutButton = document.getElementById("confirmLogout");
     const logoutForm = document.getElementById("logoutForm");

@@ -9,6 +9,7 @@ class BookingForm(forms.ModelForm):
         widget=forms.CheckboxSelectMultiple(),
         required=False,
     )
+
     class Meta:
         model = Booking
         fields = ('date', 'time_slot', 'guests', 'allergies', 'booking_notes')
@@ -17,7 +18,7 @@ class BookingForm(forms.ModelForm):
                 attrs={
                     'type': 'date',
                     'class': 'form-control',
-                    'min': date.today().strftime('%Y-%m-%d')  # Set the minimum date to today
+                    'min': date.today().strftime('%Y-%m-%d')
                 }
             ),
             'guests': forms.NumberInput(

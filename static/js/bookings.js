@@ -1,7 +1,8 @@
+/* jshint esversion: 11 */
+
 document.addEventListener("DOMContentLoaded", function () {
   const editModal = document.getElementById("editModal");
   const editButtons = document.getElementsByClassName("edit-btn");
-  const editConfirm = document.getElementById("saveConfirm");
   const bootstrapModal = new bootstrap.Modal(editModal);
   
   const editForm = document.getElementById("edit-booking-form");
@@ -48,13 +49,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
           // Show the modal
           bootstrapModal.show();
-          console.log(data.allergies)
         })
           
   
         .catch((error) => console.error("Error fetching booking:", error));
     });
-  };
+  }
   
   
   /**

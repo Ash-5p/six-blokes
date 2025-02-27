@@ -17,44 +17,14 @@ Use the space below to discuss code validation for all of your own code files (*
 
 ### HTML
 
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site URLs, validate using this link: https://validator.w3.org/#validate_by_uri
-2. Otherwise, if you are copying/pasting your HTML code manually, use this link: https://validator.w3.org/#validate_by_input
-
-It's recommended to validate the live pages (all of them) using the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://validator.w3.org/nu/?doc=https://Ash-5p.github.io/six-blokes/index.html
-
-⚠️ --- END --- ⚠️
-
-🛑 IMPORTANT 🛑
-
-RE: Python/Jinja syntax in HTML
-
-Python projects that use Jinja syntax, such as `{% for loops %}`, `{% url 'home' %}`, and `{{ variable|filter }}` will not validate properly if you're copying/pasting into the HTML validator.
-
-In order to properly validate these types of files, it's recommended to [validate by uri](https://validator.w3.org/#validate_by_uri) from the deployed Heroku pages.
-
-Unfortunately, pages that require a user to be "logged-in" and authenticated (CRUD functionality) will not work using this method, due to the fact that the HTML Validator (W3C) doesn't have access to login to an account on your project. In order to properly validate HTML pages with Jinja syntax for authenticated pages, follow these steps:
-
-- Navigate to the deployed pages which require authentication.
-- Right-click anywhere on the page, and select **View Page Source** (usually `CTRL+U` or `⌘+U` on Mac).
-- This will display the entire "compiled" code, without any Jinja syntax.
-- Copy everything, and use the [validate by input](https://validator.w3.org/#validate_by_input) method.
-- Repeat this process for every page that requires a user to be logged-in/authenticated (e.g.: CRUD functionality).
-
-🛑 ---- END --- 🛑
-
-
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
 | home | [index.html](https://github.com/Ash-5p/six-blokes/blob/main/home/templates/home/index.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2F) | ![screenshot](documentation/validation/html-home-index.png) | |
-| booking | [booking.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking.html) | | ![screenshot](documentation/validation/html-booking-booking.png) | Cannot provide w3 Validator link. Had to test via direct input due to authentication |
-| booking | [booking_list.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking_list.html) | | ![screenshot](documentation/validation/html-booking-booking_list.png) | Cannot provide w3 Validator link. Had to test via direct input due to authentication |
+| booking | [booking.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking.html) | N/A | ![screenshot](documentation/validation/html-booking-booking.png) | Cannot provide w3 Validator link. Had to test via direct input due to authentication |
+| booking | [booking_list.html](https://github.com/Ash-5p/six-blokes/blob/main/booking/templates/booking/booking_list.html) | N/A | ![screenshot](documentation/validation/html-booking-booking_list.png) | Cannot provide w3 Validator link. Had to test via direct input due to authentication |
 | menu | [menu.html](https://github.com/Ash-5p/six-blokes/blob/main/menu/templates/menu/menu.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fmenu%2Fmenu%2F) | ![screenshot](documentation/validation/html-menu-menu.png) | |
 | users | [signin_signup.html](https://github.com/Ash-5p/six-blokes/blob/main/users/templates/users/signin_signup.html) | [W3 Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fsix-blokes-6958fc1bfc25.herokuapp.com%2Fusers%2F) | ![screenshot](documentation/validation/html-users-signin_signup.png) | |
-| templates | [404.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/404.html) | | ![screenshot](documentation/validation/html-templates-404.png) | Cannot provide w3 Validator link. Had to test via direct input due to 404 error |
+| templates | [404.html](https://github.com/Ash-5p/six-blokes/blob/main/templates/404.html) | N/A | ![screenshot](documentation/validation/html-templates-404.png) | Cannot provide w3 Validator link. Had to test via direct input due to 404 error |
 
 
 ### CSS
@@ -85,31 +55,13 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 ### JavaScript
 
-⚠️ INSTRUCTIONS ⚠️
-
-If using modern JavaScript (ES6) methods, then make sure to include the following line at the very top of every single JavaScript file in your project (this should remain in your files for submission as well):
-
-`/* jshint esversion: 11 */`
-
-If you are also including jQuery (`$`), then the updated format will be:
-
-`/* jshint esversion: 11, jquery: true */`
-
-This allows the JShint validator to recognize modern ES6 methods, such as: `let`, `const`, `template literals`, `arrow functions (=>)`, etc.
-
-**IMPORTANT**: External resources
-
-Sometimes we'll write JavaScript that imports variables from other files, such as "an array of questions" from `questions.js`, which are used within the main `script.js` file elsewhere. If that's the case, the JShint validation tool doesn't know how to recognize "unused variables" that would normally be imported locally when running your own project. These warnings are acceptable, so showcase on your screenshot(s).
-
-The same thing applies when using external libraries such as Stripe, Leaflet, Bootstrap, Materialize, etc. To instantiate these components, we need to use their respective declarator. Again, the JShint validation tool would flag these as "undefined/unused variables". These warnings are acceptable, so showcase on your screenshot(s).
-
-⚠️ --- END --- ⚠️
-
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [script.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/script.js) | N/A | ![screenshot](documentation/validation/js-static-script.png) | Notes (if applicable) |
+| static | [bookings.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/bookings.js) | N/A | ![screenshot](documentation/validation/js-static-bookings.png) | Bootstrap variables shown as undefined |
+| static | [logout.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/logout.js) | N/A | ![screenshot](documentation/validation/js-static-logout.png) |  |
+| static | [menu.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/menu.js) | N/A | ![screenshot](documentation/validation/js-static-menu.png) |  |
 
 
 ### Python
