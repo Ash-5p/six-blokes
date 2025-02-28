@@ -1,6 +1,8 @@
 from django.contrib.auth.models import User
 from django.db import models
 from django.core.validators import MaxValueValidator, MinValueValidator
+from django.core.exceptions import ValidationError
+from django.utils import timezone
 
 TIMES = (
     (12, '12:00 - 13:00'),
@@ -37,16 +39,16 @@ class Booking(models.Model):
     user = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="booking_user"
     )
-    date = models.DateField(blank=True)
+    date = models.DateField()
     time_slot = models.IntegerField(choices=TIMES)
     guests = models.PositiveIntegerField(validators=[
         MinValueValidator(1), MaxValueValidator(12)
         ])
     allergies = models.ManyToManyField(Allergen, blank=True)
-    booking_notes = models.TextField()
+    booking_notes = models.TextField(blank=True)
 
     class Meta:
-        ordering = ["-date"]
+        ordering = ["date"]
 
     @property
     def name(self):
@@ -58,3 +60,13 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"Booking for {self.name} on {self.date}"
+
+    def clean(self):
+        """
+        Custom validation to ensure the date is not in the past.
+        """
+        if not self.date:
+            raise ValidationError("This field is required.")
+
+        if self.date < timezone.now().date():
+            raise ValidationError("The booking date cannot be in the past.")
