@@ -7,7 +7,6 @@ from .models import Booking
 from .forms import BookingForm
 
 
-# Create your views here.
 def booking_view(request):
     """
     Renders the booking form and allows authenticated user to

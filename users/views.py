@@ -1,7 +1,6 @@
 from allauth.account.forms import LoginForm
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import render, redirect
-from django.http import JsonResponse
 from django.contrib import messages
 from .forms import CustomSignupForm
 
@@ -16,15 +15,20 @@ def login_and_signup_view(request):
 
             if login_form.is_valid():
                 # Authenticate the user
-                username = login_form.cleaned_data.get("login")  # This is the email/username field
+                username = login_form.cleaned_data.get("login")
                 password = login_form.cleaned_data.get("password")
-                user = authenticate(request, username=username, password=password)
+                user = authenticate(
+                    request, username=username, password=password
+                    )
 
                 if user is not None:
                     login(request, user)
                     return redirect("/")
                 else:
-                    messages.error(request, "Login failed. Please check your username and password.")
+                    messages.error(
+                        request, (f"Login failed. Please check your username "
+                                  f"and password.")
+                                    )
             else:
                 messages.error(request, "Login form is invalid.")
 
@@ -38,12 +42,18 @@ def login_and_signup_view(request):
                 messages.success(request, "Account created successfully!")
                 return redirect("/")
             else:
-                messages.error(request, "Sign-up failed. Please correct the errors.")
+                messages.error(
+                    request, "Sign-up failed. Please correct the errors."
+                    )
     else:
         login_form = LoginForm()
         signup_form = CustomSignupForm()
 
-    return render(request, "users/signin_signup.html", {"login_form": login_form, "signup_form": signup_form})
+    return render(
+        request, "users/signin_signup.html", {
+            "login_form": login_form, "signup_form": signup_form
+        }
+    )
 
 
 def logout_modal_view(request):

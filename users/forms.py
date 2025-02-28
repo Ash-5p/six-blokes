@@ -1,19 +1,22 @@
 from django import forms
 from allauth.account.forms import SignupForm
-from django.contrib.auth.models import User
+
 
 class CustomSignupForm(SignupForm):
     '''
-    Sign up form - Modifies the default allauth signup form to include name input.
+    Sign up form - Modifies the default allauth signup form
+    to include name input.
     '''
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['name'] = forms.CharField(
             required=True,
             label="Full Name",
-            widget=forms.TextInput(attrs={'placeholder': 'Enter your full name'}),
+            widget=forms.TextInput(attrs={
+                'placeholder': 'Enter your full name'
+            }),
         )
-        
+
         self.fields = {
             'name': self.fields['name'],
             **self.fields
@@ -22,7 +25,6 @@ class CustomSignupForm(SignupForm):
     def save(self, request):
 
         user = super(CustomSignupForm, self).save(request)
-    
         name = self.cleaned_data.get('name')
 
         if name:
@@ -31,7 +33,7 @@ class CustomSignupForm(SignupForm):
                 user.last_name = ' '.join(name.split(' ')[1:])
             else:
                 user.last_name = ''
-        
+
         user.save()
-        
+
         return user

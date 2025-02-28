@@ -517,11 +517,12 @@ footer a {
     max-width: 470px;
     margin: auto;
     flex-direction: column;
+    font-size: 1.2em;
 }
 
   .btn-signin,
   .btn-signup {
-    margin: 10px 40%;
+    margin: 10px auto;
   }
 
   /*Booking Form-----------------------------------------------*/

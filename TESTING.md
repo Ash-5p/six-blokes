@@ -5,16 +5,6 @@
 
 ## Code Validation
 
-⚠️ INSTRUCTIONS ⚠️
-
-Use the space below to discuss code validation for all of your own code files (*where applicable*). You are not required to validate external libraries/frameworks.
-
-**MANDATORY**: You must provide a screenshot for each file you validate.
-
-**PRO TIP**: Where possible, always validate the live URL pages/files, not your local code using copy/paste. There could be subtle/hidden differences.
-
-⚠️ --- END --- ⚠️
-
 ### HTML
 
 | Directory | File | URL | Screenshot | Notes |
@@ -29,28 +19,11 @@ Use the space below to discuss code validation for all of your own code files (*
 
 ### CSS
 
-⚠️ INSTRUCTIONS ⚠️
-
-1. [*recommended*] If you are using the live deployed site, use this link: https://jigsaw.w3.org/css-validator/#validate_by_uri
-2. If you are copying/pasting your CSS code, use this link: https://jigsaw.w3.org/css-validator/#validate_by_input
-
-It's recommended to validate the live site for your primary CSS file on the deployed URL. This will give you a custom URL as well, which you can use below on your testing documentation. It makes it easier to return back to a page for validating it again in the future. The URL will look something like this:
-
-- https://jigsaw.w3.org/css-validator/validator?uri=https://six-blokes-6958fc1bfc25.herokuapp.com
-
-If you have additional/multiple CSS files, then individual "[validation by input](https://jigsaw.w3.org/css-validator/#validate_by_input)" is recommended for the extra CSS files.
-
-**IMPORTANT**: Third-Party tools
-
-If you're using external libraries/frameworks (e.g: Bootstrap, Materialize, Font Awesome, etc.), then sometimes the tool will attempt to also validate these, even though it's not part of your own actual code that you wrote. You are not required to validate the external libraries or frameworks!
-
-⚠️ --- END --- ⚠️
-
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| static | [style.css](https://github.com/Ash-5p/six-blokes/blob/main/static/css/style.css) | Link (if applicable) | ![screenshot](documentation/validation/css-static-style.png) | Notes (if applicable) |
+| static | [style.css](https://github.com/Ash-5p/six-blokes/blob/main/static/css/style.css) | [W3 Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https://six-blokes-6958fc1bfc25.herokuapp.com) | ![screenshot](documentation/validation/css-static-style.png) | Notes (if applicable) |
 
 
 ### JavaScript
@@ -121,19 +94,28 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 
 | Directory | File | URL | Screenshot | Notes |
 | --- | --- | --- | --- | --- |
-| booking | [admin.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/admin.py) | ![screenshot](documentation/validation/py-booking-admin.png) | Notes (if applicable) |
-| booking | [forms.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/forms.py) | ![screenshot](documentation/validation/py-booking-forms.png) | Notes (if applicable) |
-| booking | [models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/models.py) | ![screenshot](documentation/validation/py-booking-models.png) | Notes (if applicable) |
-| booking | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/tests.py) | ![screenshot](documentation/validation/py-booking-tests.png) | Notes (if applicable) |
-| booking | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/urls.py) | ![screenshot](documentation/validation/py-booking-urls.png) | Notes (if applicable) |
-| booking | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/views.py) | ![screenshot](documentation/validation/py-booking-views.png) | Notes (if applicable) |
-|  | [env.py](https://github.com/Ash-5p/six-blokes/blob/main/env.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/env.py) | ![screenshot](documentation/validation/py--env.png) | Notes (if applicable) |
+| booking | [admin.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/admin.py) | ![screenshot](documentation/validation/py-booking-admin.png) | |
+| booking | [forms.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/forms.py) | ![screenshot](documentation/validation/py-booking-forms.png) | |
+| booking | [models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/models.py) | ![screenshot](documentation/validation/py-booking-models.png) | |
+| booking | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/tests.py) | ![screenshot](documentation/validation/py-booking-tests.png) | |
+| booking | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/urls.py) | ![screenshot](documentation/validation/py-booking-urls.png) | |
+| booking | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/views.py) | ![screenshot](documentation/validation/py-booking-views.png) | |
+| menu | [admin.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/admin.py) | ![screenshot](documentation/validation/py-menu-admin.png) | |
+| menu | [models.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/models.py) | ![screenshot](documentation/validation/py-menu-models.png) | |
+| menu | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/tests.py) | ![screenshot](documentation/validation/py-menu-tests.png) | |
+| menu | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/urls.py) | ![screenshot](documentation/validation/py-menu-urls.png) | |
+| menu | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/views.py) | ![screenshot](documentation/validation/py-menu-views.png) | |
+| home | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/home/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/home/tests.py) | ![screenshot](documentation/validation/py-home-tests.png) | |
+| home | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/home/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/home/urls.py) | ![screenshot](documentation/validation/py-home-urls.png) | |
+| home | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/home/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/home/views.py) | ![screenshot](documentation/validation/py-home-views.png) | |
+| users | [forms.py](https://github.com/Ash-5p/six-blokes/blob/main/users/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/forms.py) | ![screenshot](documentation/validation/py-users-forms.png) | |
+| users | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/users/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/tests.py) | ![screenshot](documentation/validation/py-users-tests.png) | |
+| users | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/users/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/urls.py) | ![screenshot](documentation/validation/py-users-urls.png) | |
+| users | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/users/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/views.py) | ![screenshot](documentation/validation/py-users-views.png) | |
 |  | [manage.py](https://github.com/Ash-5p/six-blokes/blob/main/manage.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/manage.py) | ![screenshot](documentation/validation/py--manage.png) | Notes (if applicable) |
-| my_project | [settings.py](https://github.com/Ash-5p/six-blokes/blob/main/my_project/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/my_project/settings.py) | ![screenshot](documentation/validation/py-my_project-settings.png) | Notes (if applicable) |
-| my_project | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/my_project/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/my_project/urls.py) | ![screenshot](documentation/validation/py-my_project-urls.png) | Notes (if applicable) |
-| users | [forms.py](https://github.com/Ash-5p/six-blokes/blob/main/users/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/forms.py) | ![screenshot](documentation/validation/py-users-forms.png) | Notes (if applicable) |
-| users | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/users/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/urls.py) | ![screenshot](documentation/validation/py-users-urls.png) | Notes (if applicable) |
-| users | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/users/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/users/views.py) | ![screenshot](documentation/validation/py-users-views.png) | Notes (if applicable) |
+| my_project | [settings.py](https://github.com/Ash-5p/six-blokes/blob/main/my_project/settings.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/my_project/settings.py) | ![screenshot](documentation/validation/py-my_project-settings.png) | |
+| my_project | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/my_project/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/my_project/urls.py) | ![screenshot](documentation/validation/py-my_project-urls.png) | |
+
 
 
 ## Responsiveness

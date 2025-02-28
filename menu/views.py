@@ -18,7 +18,7 @@ def menu(request):
         All instances of :model:`menu.MenuItem` where catergory="dessert".
     ``menu_drinks``
         All instances of :model:`menu.MenuItem` where catergory="drink".
-        
+
     **Template:**
 
     :template:`menu/menu.html`
@@ -36,7 +36,7 @@ def menu(request):
         "menu_desserts": menu_desserts,
         "menu_drinks": menu_drinks
     }
-    
+
     return render(
         request,
         "menu/menu.html",

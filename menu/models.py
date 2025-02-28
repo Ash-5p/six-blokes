@@ -11,7 +11,6 @@ CATEGORY = (
 )
 
 
-# Create your models here.
 class MenuItem(models.Model):
     """
     Stores a single menu item.
