@@ -292,6 +292,16 @@ input[id^="id_allergies_"],
 
 /*Exsiting Bookings-----------------------------------------------*/
 
+.no-bookings-text {
+  margin: 20px auto;
+  font-size: 1.4em;
+  border: solid 2px;
+  padding: 0 5px;
+  background-color: #212529;
+  border-radius: 5px;
+  width: fit-content;
+}
+
 .user-bookings {
   width: 100%;
 }
