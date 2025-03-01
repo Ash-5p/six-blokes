@@ -536,7 +536,7 @@ Use this space to provide attribution links for any borrowed code snippets, elem
 
 | Source | Notes |
 | --- | --- |
-| [favicon.io](https://favicon.io) | Generating the favicon |
+| [favicon.io](https://favicon.io/emoji-favicons/hamburger/) | Favicon |
 | [I Think Therefore I Blog](https://codeinstitute.net) | Sample images provided from the walkthrough projects |
 | [Font Awesome](https://fontawesome.com) | Icons used throughout the site |
 | [DeepAI](https://deepai.org/) | AI generated artwork for Homepage & Menu images |

@@ -18,7 +18,7 @@ class BookingForm(forms.ModelForm):
                 attrs={
                     'type': 'date',
                     'class': 'form-control',
-                    'min': date.today().strftime('%Y-%m-%d')
+                    'min': date.today().strftime('%Y-%m-%d'),
                 }
             ),
             'guests': forms.NumberInput(
