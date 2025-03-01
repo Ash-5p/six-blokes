@@ -4,7 +4,7 @@ from django.test import TestCase
 from users.forms import CustomSignupForm
 
 
-class TestBookingViews(TestCase):
+class TestSigninSignupViews(TestCase):
 
     def test_successful_custom_signup_form_render(self):
         """Test for ensuring signin & signup forms render correctly"""

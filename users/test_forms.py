@@ -2,7 +2,7 @@ from django.test import TestCase
 from users.forms import CustomSignupForm
 
 
-class TestBookingForm(TestCase):
+class TestSignupForm(TestCase):
 
     def test_custom_signup_form_is_valid(self):
         """Tests custom signup form is valid"""
