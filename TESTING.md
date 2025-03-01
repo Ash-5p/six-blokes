@@ -97,7 +97,8 @@ I have used the recommended [PEP8 CI Python Linter](https://pep8ci.herokuapp.com
 | booking | [admin.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/admin.py) | ![screenshot](documentation/validation/py-booking-admin.png) | |
 | booking | [forms.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/forms.py) | ![screenshot](documentation/validation/py-booking-forms.png) | |
 | booking | [models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/models.py) | ![screenshot](documentation/validation/py-booking-models.png) | |
-| booking | [tests.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/tests.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/tests.py) | ![screenshot](documentation/validation/py-booking-tests.png) | |
+| booking | [test_views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/test_views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/test_views.py) | ![screenshot](documentation/validation/py-booking-test_views.png) | |
+| booking | [test_forms.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/test_forms.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/test_forms.py) | ![screenshot](documentation/validation/py-booking-test_forms.png) | |
 | booking | [urls.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/urls.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/urls.py) | ![screenshot](documentation/validation/py-booking-urls.png) | |
 | booking | [views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/views.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/booking/views.py) | ![screenshot](documentation/validation/py-booking-views.png) | |
 | menu | [admin.py](https://github.com/Ash-5p/six-blokes/blob/main/menu/admin.py) | [PEP8 CI Link](https://pep8ci.herokuapp.com/https://raw.githubusercontent.com/Ash-5p/six-blokes/main/menu/admin.py) | ![screenshot](documentation/validation/py-menu-admin.png) | |
@@ -226,12 +227,6 @@ I have conducted a series of automated tests on my application.
 
 ### Python (Unit Testing)
 
-⚠️ INSTRUCTIONS ⚠️
-
-Adjust the code below (file names, function names, etc.) to match your own project files/folders. Use these notes loosely when documenting your own Python Unit tests, and remove/adjust where applicable.
-
-⚠️ SAMPLE ⚠️
-
 I have used Django's built-in unit testing framework to test the application functionality. In order to run the tests, I ran the following command in the terminal each time:
 
 - `python3 manage.py test name-of-app`
@@ -252,29 +247,7 @@ Below are the results from the full coverage report on my application that I've 
 
 ![screenshot](documentation/automation/html-coverage.png)
 
-#### Unit Test Issues
-
-⚠️ INSTRUCTIONS ⚠️
-
-Use this section to list any known issues you ran into while writing your Python unit tests. Remember to include screenshots (where possible), and a solution to the issue (if known). This can be used for both "fixed" and "unresolved" issues. Remove this sub-section entirely if you somehow didn't run into any issues while working with your tests.
-
-⚠️ --- END --- ⚠️
-
 ## Bugs
-
-⚠️ INSTRUCTIONS ⚠️
-
-Nobody likes bugs,... except the assessors! Projects seem more suspicious if a student doesn't properly track their bugs. If you're about to submit your project without any bugs listed below, you should ask yourself why you're doing this course in the first place, if you're able to build this entire application without running into any bugs. The best thing you can do for any project is to document your bugs! Not only does it show the true stages of development, but think of it as breadcrumbs for yourself in the future, should you encounter the same/similar bug again, it acts as a gentle reminder on what you did to fix the bug.
-
-If/when you encounter bugs during the development stages of your project, you should document them here, ideally with a screenshot explaining what the issue was, and what you did to fix the bug.
-
-Alternatively, an improved way to manage bugs is to use the built-in **[Issues](https://www.github.com/Ash-5p/six-blokes/issues)** tracker on your GitHub repository. This can be found at the top of your repository, the tab called "Issues".
-
-If using the Issues tracker for bug management, you can simplify the documentation process for testing. Issues allow you to directly paste screenshots into the issue page without having to first save the screenshot locally. You can add labels to your issues (e.g. `bug`), assign yourself as the owner, and add comments/updates as you progress with fixing the issue(s). Once you've solved the issue/bug, you should then "Close" it.
-
-When showcasing your bug tracking for assessment, you can use the following examples below.
-
-⚠️ --- END --- ⚠️
 
 ### Fixed Bugs
 
@@ -306,7 +279,7 @@ Any remaining open issues can be tracked [here](https://www.github.com/Ash-5p/si
 
 | Issue | Screenshot |
 | --- | --- |
-| On devices smaller than 375px, the page starts to have horizontal `overflow-x` scrolling. | ![screenshot](documentation/issues/overflow.png) |
+| On devices smaller than 280px, the page starts to have horizontal `overflow-x` scrolling. | ![screenshot](documentation/issues/overflow.png) |
 | When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
 | Validation errors on "signup.html" coming from the Django Allauth package. | ![screenshot](documentation/issues/allauth.png) |
 
