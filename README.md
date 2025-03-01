@@ -99,7 +99,10 @@ I used [coolors.co](https://coolors.co/ffcc00-212529-bd0000-f9fafc) to generate 
 
 | Target | Expectation | Outcome |
 | --- | --- | --- |
-| As a site admin | I would like to create, read, update and delete menu items | so that I can manage the menu when the resturant makes changes to its menu. |
+| As a site admin | I would like to create menu items| so that I can add new items when the resturant releases a new food item. |
+| As a site admin | I would like to edit menu items| so that I can change information of an existing menu item, for example; if the recipe changed which changed the allergen information. |
+| As a site admin | I would like to view menu items| so that I see all of the menu items in one place. |
+| As a site admin | I would like to delete menu items| so that I can remove discontinued item from the menu. |
 | As a site admin | I would like to create bookings| so that I can create a booking on behalf of a customer who books via telephone or email. |
 | As a site admin | I would like to edit bookings| so that I can edit a booking on behalf of a customer who books via telephone or email. |
 | As a site admin | I would like to view bookings| so that I can plan accordingly few upcoming bookings. |

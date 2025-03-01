@@ -159,43 +159,6 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 ## Defensive Programming
 
-⚠️ INSTRUCTIONS ⚠️
-
-Defensive programming (defensive design) is extremely important! When building projects that accept user inputs or forms, you should always test the level of security for each form field. Examples of this could include (but not limited to):
-
-All Projects:
-
-- Users cannot submit an empty form (add the `required` attribute)
-- Users must enter valid field types (ensure the correct input `type=""` is used)
-- Users cannot brute-force a URL to navigate to a restricted pages
-
-Python Projects:
-
-- Users cannot perform CRUD functionality if not authenticated (if login functionality exists)
-- User-A should not be able to manipulate data belonging to User-B, or vice versa
-- Non-Authenticated users should not be able to access pages that require authentication
-- Standard users should not be able to access pages intended for superusers/admins
-
-You'll want to test all functionality on your application, whether it's a standard form, or CRUD functionality, for data manipulation on a database. Try to access various pages on your site as different user types (User-A, User-B, guest user, admin, superuser). You should include any manual tests performed, and the expected results/outcome.
-
-Testing should be replicable (can someone else replicate the same outcome?). Ideally, tests cases should focus on each individual section of every page on the website. Each test case should be specific, objective, and step-wise replicable.
-
-Instead of adding a general overview saying that everything works fine, consider documenting tests on each element of the page (eg. button clicks, input box validation, navigation links, etc.) by testing them in their "happy flow", their "bad/exception flow", mentioning the expected and observed results, and drawing a parallel between them where applicable.
-
-Consider using the following format for manual test cases:
-
-- Expected Outcome / Test Performed / Result Received / Fixes Implemented
-
-- **Expected**: "Feature is expected to do X when the user does Y."
-- **Testing**: "Tested the feature by doing Y."
-- (either) **Result**: "The feature behaved as expected, and it did Y."
-- (or) **Result**: "The feature did not respond to A, B, or C."
-- **Fix**: "I did Z to the code because something was missing."
-
-Use the table below as a basic start, and expand on it using the logic above.
-
-⚠️ --- END --- ⚠️
-
 Defensive programming was manually tested with the below user acceptance testing:
 
 | Page | Expectation | Test | Result | Screenshot | Additional Screenshot |
@@ -215,15 +178,13 @@ Defensive programming was manually tested with the below user acceptance testing
 | User Authentication | Feature is expected to allow registered users to log in to the site. | Attempted to log in with valid and invalid credentials. | Login was successful with valid credentials; invalid credentials were rejected. | ![screenshot](documentation/defensive/login-valid.png) | ![screenshot](documentation/defensive/login-invalid.png) |
 | | Feature is expected to allow users to register for an account. | Registered a new user with unique credentials with valid & invalid information. | User account was created successfully with valid information; invalid credentials rejected, and error message displayed | ![screenshot](documentation/defensive/register-valid.png) | ![screenshot](documentation/defensive/register-invalid.png) |
 | | Feature is expected to allow users to log out securely. | Logged out and tried accessing a restricted page. | "Book a Table" page can be accessed when logged out, however message informing user to login is rendered instead of booking form. If an attempt is made to access other restricted pages, the user is automatically redirected to the login page.  | ![screenshot](documentation/defensive/logout.png) | ![screenshot](documentation/defensive/logout-restricted-page.png) |
-
-| User Bookings | Feature is expected to allow registered users to create bookings. | Logged in and submitted booking form with valid information. | Booking was successfully created and was visible on the users "My Bookings" page. | ![screenshot](documentation/defensive/add-comment.png) |
-| | Feature is expected to display a notification that comments are pending approval. | Added a comment and checked the notification message. | Notification was displayed as expected. | ![screenshot](documentation/defensive/pending-approval.png) |
-| | Feature is expected to allow users to edit their own comments. | Edited personal comments. | Comments were updated as expected. | ![screenshot](documentation/defensive/edit-user-comments.png) |
-| | Feature is expected to allow users to delete their own comments. | Deleted personal comments. | Comments were removed as expected. | ![screenshot](documentation/defensive/delete-user-comments.png) |
-| Guest Features | Feature is expected to allow guest users to read bookings without registering. | Opened bookings as a guest user. | bookings were fully accessible without logging in. | ![screenshot](documentation/defensive/view-posts-guest.png) |
-| | Feature is expected to display the names of other commenters on posts. | Checked the names of commenters on posts as a guest user. | Commenter names were displayed as expected. | ![screenshot](documentation/defensive/commenter-names.png) |
-| | Feature is expected to block standard users from brute-forcing admin pages. | Attempted to navigate to admin-only pages by manipulating the URL (e.g., `/admin`). | Access was blocked, and a message was displayed showing denied access. | ![screenshot](documentation/defensive/brute-force.png) |
-| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) |
+| User Bookings | Feature is expected to allow registered users to create bookings. | Logged in and submitted booking form with valid information. | Booking was successfully created and was visible on the users "My Bookings" page. | ![screenshot](documentation/defensive/user-create-booking.png) | |
+| | Feature is expected to allow registered users to update their existing bookings. | Logged in, went to the "My Bookings" page, and clicked the edit button on a booking, then changed the information in the modal with some different valid information and clicked "Save Changes". | Booking was successfully updated and was visible on the users "My Bookings" page. | ![screenshot](documentation/defensive/user-update-booking.png) | |
+| | Feature is expected to allow registered users to delete their existing bookings. | Logged in, went to the "My Bookings" page, and clicked the delete button on a booking, then confirmed the action before proceeding. | Booking was successfully deleted and was no longer visible on the users "My Bookings" page. | ![screenshot](documentation/defensive/user-delete-booking.png) | |
+| | Feature is expected to retrieve a list of all of the logged in users bookings. | Logged in and went to the "My Bookings" page to view a list of all of the logged in users bookings. | All bookings belonging to the logged in user were displayed in a list view. | ![screenshot](documentation/defensive/user-read-bookings.png) | |
+| Guest Features | Feature is expected to allow guest users to read the menu without registering. | Opened menu as a guest user. | Menu was fully accessible without logging in. | ![screenshot](documentation/defensive/guest-read-menu.png) |
+| | Feature is expected to block standard users from brute-forcing admin pages. | Attempted to navigate to admin-only pages by manipulating the URL (e.g., `/admin`). | Access was blocked, and a message was displayed showing denied access. | ![screenshot](documentation/defensive/brute-force.png) | |
+| 404 Error Page | Feature is expected to display a 404 error page for non-existent pages. | Navigated to an invalid URL (e.g., `/test`). | A custom 404 error page was displayed as expected. | ![screenshot](documentation/defensive/404.png) | |
 
 ## User Story Testing
 
@@ -235,28 +196,34 @@ Most of your project's **Features** should already align with the **User Stories
 
 ⚠️ --- END --- ⚠️
 
-| Target | Expectation | Outcome | Screenshot |
+| Target | Expectation | Outcome | Screenshot/Link |
 | --- | --- | --- | --- |
-| As a site admin | I would like to create new bookings with a title, featured image, and content | so that I can share my experiences with my audience. | ![screenshot](documentation/features/feature01.png) |
-| As a site admin | I would like to update existing bookings | so that I can correct or add new information to my previous stories. | ![screenshot](documentation/features/feature02.png) |
-| As a site admin | I would like to delete bookings | so that I can remove outdated or irrelevant content from my blog. | ![screenshot](documentation/features/feature03.png) |
-| As a site admin | I would like to retrieve a list of all my published bookings | so that I can manage them from a central dashboard. | ![screenshot](documentation/features/feature04.png) |
-| As a site admin | I would like to preview a post as draft before publishing it | so that I can ensure formatting and content appear correctly. | ![screenshot](documentation/features/feature05.png) |
-| As a site admin | I would like to review comments before they are published | so that I can filter out spam or inappropriate content. | ![screenshot](documentation/features/feature06.png) |
-| As a site admin | I would like to approve or reject comments from users | so that I can maintain control over the discussion on my posts. | ![screenshot](documentation/features/feature07.png) |
-| As a site admin | I would like to view a list of all comments (both approved and pending) | so that I can manage user engagement effectively. | ![screenshot](documentation/features/feature08.png) |
-| As a site admin | I would like to edit or delete user comments | so that I can clean up or remove inappropriate responses after they've been posted. | ![screenshot](documentation/features/feature09.png) |
-| As a registered user | I would like to log in to the site | so that I can leave comments on bookings. | ![screenshot](documentation/features/feature10.png) |
-| As a registered user | I would like to register for an account | so that I can become part of the community and engage with the blog. | ![screenshot](documentation/features/feature11.png) |
-| As a registered user | I would like to leave a comment on a booking | so that I can share my thoughts or ask questions about the owner's experiences. | ![screenshot](documentation/features/feature12.png) |
-| As a registered user | I would like my comment to show my name and the timestamp | so that others can see who I am and when I left the comment. | ![screenshot](documentation/features/feature13.png) |
-| As a registered user | I would like to receive a notification or message saying my comment is pending approval | so that I understand it hasn't been posted immediately. | ![screenshot](documentation/features/feature14.png) |
-| As a registered user | I would like to edit or delete my own comments | so that I can fix mistakes or retract my statement. | ![screenshot](documentation/features/feature15.png) |
-| As a guest user | I would like to read bookings without registering | so that I can enjoy the content without needing to log in. | ![screenshot](documentation/features/feature16.png) |
-| As a guest user | I would like to browse past posts | so that I can explore the blog's full content history. | ![screenshot](documentation/features/feature17.png) |
-| As a guest user | I would like to register for an account | so that I can participate in the community by leaving comments on posts. | ![screenshot](documentation/features/feature18.png) |
-| As a guest user | I would like to see the names of other commenters on posts | so that I can get a sense of community interaction before registering. | ![screenshot](documentation/features/feature19.png) |
-| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/feature20.png) |
+| As a site admin | I would like to create menu items| so that I can add new items when the resturant releases a new food item. | ![screenshot](documentation/features/create-menu-item.png) |
+| As a site admin | I would like to edit menu items| so that I can change information of an existing menu item, for example; if the recipe changed which changed the allergen information. | ![screenshot](documentation/features/edit-menu-item.png) |
+| As a site admin | I would like to view menu items| so that I see all of the menu items in one place. | ![screenshot](documentation/features/view-menu-item.png) |
+| As a site admin | I would like to delete menu items| so that I can remove discontinued item from the menu. | ![screenshot](documentation/features/delete-menu-item.png) |
+| As a site admin | I would like to create bookings| so that I can create a booking on behalf of a customer who books via telephone or email. | ![screenshot](documentation/features/create-booking-admin.png) |
+| As a site admin | I would like to edit bookings| so that I can edit a booking on behalf of a customer who books via telephone or email. | ![screenshot](documentation/features/edit-booking-admin.png) |
+| As a site admin | I would like to view bookings| so that I can plan accordingly few upcoming bookings. | ![screenshot](documentation/features/view-booking-admin.png) |
+| As a site admin | I would like to delete bookings| so that I can cancel a booking on behalf of a customer who books via telephone or email. | ![screenshot](documentation/features/delete-booking-admin.png) |
+| As a site admin | I would like the site to prevent overbooking| so that I don't have to manually go through bookings to inform customers if we are fully booked. | Not Implimented |
+| As a registered user | I would like to log in to the site | so that I can create & manage bookings. | ![screenshot](documentation/features/register-login.png) |
+| As a registered user | I would like to log out of my account | so that I can ensure my account is secure when not in use. | ![screenshot](documentation/features/logout.png) |
+| As a registered user | I would like to create bookings | so that I can reserve a table at the resturant for a desired date/timeslot. | ![screenshot](documentation/features/create-booking.png) |
+| As a registered user | I would like to view an list of my upcoming bookings (ordered by most recent) | so that I can see all my upcoming bookings in one place. | ![screenshot](documentation/features/view-booking.png) |
+| As a registered user | I would like my modify my existing bookings | so that I can adjust parts of my booking without having to create a new one if my plans change. | ![screenshot](documentation/features/edit-booking.png) |
+| As a registered user | I would like delete my existing bookings | so that I can cancel a booking if I can no longer attend. | ![screenshot](documentation/features/delete-booking.png) |
+| As a registered user | I would like to see the availibility of timeslots when booking | so that I know if the timeslot if free. | Not Implimented |
+| As a guest user | I would like to register for an account | so that I can create and manage bookings. | ![screenshot](documentation/features/register-login.png) |
+| As a user | I would like to view the menu | so that I can see what the resturant has to offer. | ![screenshot](documentation/features/menu.png) |
+| As a user | I would like to view a homepage | so that I can read about the resturant, and what it specialises in. | ![screenshot](documentation/features/homepage.png) |
+| As a user | I would like to see be able to contact the resturant | so that I can make bookings over the phone or by email. | ![screenshot](documentation/features/footer.png) |
+| As a user | I would like the site to scale correctly to my device size | so that I can comfortably view/use the site on all of my devices. | ![screenshot](documentation/amiresponsive.png) |
+| As a user | I would like to see links to the resturant's social media pages| so that I can follow them for news on any upcoming event, offers, menu changes, etc... | ![screenshot](documentation/features/footer.png) |
+| As a user | I would like to see a 404 error page if I get lost | so that it's obvious that I've stumbled upon a page that doesn't exist. | ![screenshot](documentation/features/404.png) |
+| As a developer | I would like to see a README file | so that I can famliarise myself with all of the site's features, database schema, and any know issues/bugs before making contributions. | [GitHub - README](https://github.com/Ash-5p/six-blokes/blob/main/README.md) |
+| As a developer | I would like to see a TESTING file | so that I can see a document of all tests that have been conducted on the sites features, so I know they work as intened, and am aware of any known bugs. | [GitHub - TESTING](https://github.com/Ash-5p/six-blokes/blob/main/TESTING.md) |
+| As a developer | I can deploy the site to Heroku | so that I can test the features of the website through the develpment process, and test it on multiple browsers. | [Heroku - Live Site](https://six-blokes-6958fc1bfc25.herokuapp.com/) |
 
 ## Automated Testing
 
