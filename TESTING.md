@@ -188,14 +188,6 @@ Defensive programming was manually tested with the below user acceptance testing
 
 ## User Story Testing
 
-⚠️ INSTRUCTIONS ⚠️
-
-Testing User Stories is actually quite simple, once you've already got the stories defined on your README.
-
-Most of your project's **Features** should already align with the **User Stories**, so this should be as simple as creating a table with the User Story, matching with the re-used screenshot from the respective Feature.
-
-⚠️ --- END --- ⚠️
-
 | Target | Expectation | Outcome | Screenshot/Link |
 | --- | --- | --- | --- |
 | As a site admin | I would like to create menu items| so that I can add new items when the resturant releases a new food item. | ![screenshot](documentation/features/create-menu-item.png) |
