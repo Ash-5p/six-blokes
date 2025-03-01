@@ -5,7 +5,7 @@
 
 {% block content %}
 <div class="container text-center bg-dark sign-in-box">
-  <div class="row">
+  <section class="row">
     <!-- Sign In Form -->
     <div class="col mt-3">
       <h3>{% trans "Sign In" %}</h3>
@@ -16,9 +16,9 @@
         <button class="btn btn-signup btn-primary right" type="submit">{% trans "Sign In" %}</button>
       </form>
     </div>
-  </div>
+  </section>
   <hr>
-  <div class="row">
+  <section class="row">
     <!-- Sign Up Form -->
     <div class="col mt-3">
       <h3>{% trans "Sign Up" %}</h3>
@@ -29,6 +29,6 @@
         <button class="btn btn-signup btn-primary right" type="submit">{% trans "Create Account" %}</button>
       </form>
     </div>
-  </div>
+  </section>
 </div>
 {% endblock %}
