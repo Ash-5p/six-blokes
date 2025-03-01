@@ -4,6 +4,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from django.test import TestCase
 from .models import Booking, Allergen
+from .forms import BookingForm
 
 
 class TestBookingViews(TestCase):
@@ -23,6 +24,16 @@ class TestBookingViews(TestCase):
             booking_notes="Test"
         )
         self.booking.allergies.set([self.allergen])
+
+    def test_successful_booking_form_render(self):
+        """Test for ensuring booking form renders"""
+        self.client.login(
+            username="myUsername", password="myPassword")
+        response = self.client.post(reverse(
+            'booking'))
+        self.assertEqual(response.status_code, 200)
+        self.assertIsInstance(
+            response.context['booking_form'], BookingForm)
 
     def test_successful_booking_submission(self):
         """Test for creating a booking"""
