@@ -10,6 +10,12 @@ main {
   margin: 20px 0;
 }
 
+input,
+.form-control,
+.form-select {
+  font-family: "Abel", serif;
+}
+
 .btn {
   color: #ffce0a;
   border: 1px solid #ffce0a;
@@ -170,7 +176,7 @@ th {
   margin: auto;
 }
 
-.col.error-links h3{
+.col.error-links h3 {
   font-size: 1.5em;
 }
 
@@ -181,8 +187,6 @@ th {
 .list-style-inside > li {
   margin-left: -20.8px;
 }
-
-
 
 /*Sign in/ Sign up-----------------------------------------------*/
 
@@ -370,6 +374,7 @@ input[id^="id_allergies_"],
   width: 100%;
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
+  font-family: "Abel", serif;
   font-weight: 400;
   line-height: 1.5;
   color: #212529;
@@ -528,7 +533,7 @@ footer a {
     margin: auto;
     flex-direction: column;
     font-size: 1.2em;
-}
+  }
 
   .btn-signin,
   .btn-signup {
