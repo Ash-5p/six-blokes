@@ -475,8 +475,8 @@ There are no remaining major differences between the local version when compared
 | [WebAIM](https://webaim.org/resources/contrastchecker) | Check colour contrast for accessiblity |
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 | [ChatGPT](https://chatgpt.com) | Suggested using JSON Response for [booking/views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/views.py#L111-L117) | |
-| [GeeksforGeeks](https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model) | [booking/models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py#L44-L46) |
-| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event) | [static/logout.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/logout.js#L12-L16) |
+| [GeeksforGeeks](https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model) | Min/Max value validation for guests [booking/models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py#L44-L46) |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event) | Bug fix for logout issue [static/logout.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/logout.js#L12-L16) |
 
 
 ### Media
