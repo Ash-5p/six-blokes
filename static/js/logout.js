@@ -9,4 +9,9 @@ document.addEventListener("DOMContentLoaded", function () {
             logoutForm.submit();
         });
     }
+    window.addEventListener("pageshow", function (event) {
+        if (event.persisted) {
+            window.location.reload();
+        }
+    });
 });

@@ -108,8 +108,6 @@ def booking_edit(request, booking_id):
             messages.error(request, "Error updating booking!")
         return HttpResponseRedirect(reverse("booking_list"))
 
-    # If GET request, return JSON response with booking data
-    # (Suggested by ChatGPT)
     return JsonResponse({
         "date": booking.date.strftime("%Y-%m-%d"),
         "time_slot": booking.time_slot,
