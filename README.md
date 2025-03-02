@@ -191,6 +191,7 @@ I've used [Figma](https://www.figma.com) to design my site wireframes.
 - **Menu Allergen Filter**: Add a filter feature which allows users to filter out items with one or more selected allergens.
 - **Notifications**: Implement a notification system that alerts users when their bookings are approved.
 - **Email Subscriptions**: Allow users to subscribe to receive email notifications for new deals, updates, or newsletters.
+- **Order Online/Delivery Service**: Allow users to order for deliver, and pay online.
 
 ## Tools & Technologies
 
@@ -475,7 +476,7 @@ There are no remaining major differences between the local version when compared
 | [ChatGPT](https://chatgpt.com) | Help with code logic and explanations |
 | [ChatGPT](https://chatgpt.com) | Suggested using JSON Response for [booking/views.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/views.py#L111-L117) | |
 | [GeeksforGeeks](https://www.geeksforgeeks.org/limit-the-maximum-value-of-a-numeric-field-in-a-django-model) | [booking/models.py](https://github.com/Ash-5p/six-blokes/blob/main/booking/models.py#L44-L46) |
-| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event) | [static/logout.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/logout.js#L7C5-L11C6) |
+| [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event) | [static/logout.js](https://github.com/Ash-5p/six-blokes/blob/main/static/js/logout.js#L12-L16) |
 
 
 ### Media
