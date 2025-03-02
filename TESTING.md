@@ -210,14 +210,6 @@ All previously closed/fixed bugs can be tracked [here](https://www.github.com/As
 
 ### Unfixed Bugs
 
-⚠️ INSTRUCTIONS ⚠️
-
-You will need to mention any unfixed bugs and why they are not fixed upon submission of your project. This section should include shortcomings of the frameworks or technologies used. Although time can be a big variable to consider, paucity of time and difficulty understanding implementation is not a valid reason to leave bugs unfixed. Where possible, you must fix all outstanding bugs, unless outside of your control.
-
-If you've identified any unfixed bugs, no matter how small, be sure to list them here! It's better to be honest and list them, because if it's not documented and an assessor finds the issue, they need to know whether or not you're aware of them as well, and why you've not corrected/fixed them.
-
-⚠️ --- END --- ⚠️
-
 [![GitHub issues](https://img.shields.io/github/issues/Ash-5p/six-blokes)](https://www.github.com/Ash-5p/six-blokes/issues)
 
 Any remaining open issues can be tracked [here](https://www.github.com/Ash-5p/six-blokes/issues).
@@ -229,8 +221,6 @@ Any remaining open issues can be tracked [here](https://www.github.com/Ash-5p/si
 | Issue | Screenshot |
 | --- | --- |
 | On devices smaller than 280px, the page starts to have horizontal `overflow-x` scrolling. | ![screenshot](documentation/issues/overflow.png) |
-| When validating HTML with a semantic `<section>` element, the validator warns about lacking a header `h2-h6`. This is acceptable. | ![screenshot](documentation/issues/section-header.png) |
-| Validation errors on "signup.html" coming from the Django Allauth package. | ![screenshot](documentation/issues/allauth.png) |
 
 > [!IMPORTANT]
 > There are no remaining bugs that I am aware of, though, even after thorough testing, I cannot rule out the possibility.
